@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0AAFAC24-7970-4187-806C-DAA3D986978A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ocad.Model</RootNamespace>
+    <AssemblyName>Ocad.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\SupportedVersion.cs" />
+    <Compile Include="Event\Course\Description\BasicDescription.cs" />
+    <Compile Include="Event\Course\Description\ControlDescription.cs" />
+    <Compile Include="Event\Course\Description\EventObjectDescription.cs" />
+    <Compile Include="Event\Object\AbstractMappedObject.cs" />
+    <Compile Include="Event\Object\Control.cs" />
+    <Compile Include="Event\Course\Leg.cs" />
+    <Compile Include="Event\Setting\ControlDescriptionPrintParameter.cs" />
+    <Compile Include="Event\Setting\ExportCoursesStatisticsParameter.cs" />
+    <Compile Include="Event\Setting\ExportCoursesTextParameter.cs" />
+    <Compile Include="Event\Setting\Parameter.cs" />
+    <Compile Include="Event\Course\Class.cs" />
+    <Compile Include="Event\Course\Course.cs" />
+    <Compile Include="Event\Course\Description\Branch\LegVariations.cs" />
+    <Compile Include="Event\Course\Description\Branch\DescriptionSegment.cs" />
+    <Compile Include="Event\Course\Description\LegVariation.cs" />
+    <Compile Include="Event\Course\Description\Branch\RelayVariations.cs" />
+    <Compile Include="Event\Event.cs" />
+    <Compile Include="Event\Object\AbstractObject.cs" />
+    <Compile Include="Event\Object\ControlDescriptionSheet.cs" />
+    <Compile Include="Event\Object\MarkedRoute.cs" />
+    <Compile Include="Event\Object\TextBlock.cs" />
+    <Compile Include="Event\Type.cs" />
+    <Compile Include="Model\Map.cs" />
+    <Compile Include="Model\Object\AbstractObject.cs" />
+    <Compile Include="Model\Object\GraphicObject.cs" />
+    <Compile Include="Model\Object\ImageObject.cs" />
+    <Compile Include="Model\Object\ImportedObject.cs" />
+    <Compile Include="Model\Object\SymbolObject.cs" />
+    <Compile Include="Model\Point.cs" />
+    <Compile Include="IO\Ocad9\Constant.cs" />
+    <Compile Include="IO\Ocad9\MapExtension.cs" />
+    <Compile Include="IO\Ocad9\Reader.cs" />
+    <Compile Include="IO\Ocad9\Record\AbstractRecord.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\List\EventClassSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\List\EventCourseSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\List\EventObjectSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\List\EventPreviewObjectSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\Parameter\EventControlDescriptionPrintParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\Parameter\EventExportCoursesStatisticsParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\Parameter\EventExportCoursesTextParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Event\Parameter\EventParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\ColourSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\DatabaseObjectSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\DataSetSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\FileInfoSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\ImportLayerSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\MiscellaneousSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\OimFileSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\OimFindSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\SpotColourSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\SymbolTreeSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\TemplateSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\List\ZoomSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\DatabaseCreateObjectParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\DatabaseParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\DisplayParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\EpsParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\ExportParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\OimParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\PrintParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\ScaleParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\SelectedSpotColoursParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\TemplateParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\TiffParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\TilesParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\ViewParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Model\Parameter\XmlScriptParameterSetting.cs" />
+    <Compile Include="IO\Ocad9\Record\Helper\Setting.cs" />
+    <Compile Include="IO\Ocad9\Record\Object.cs" />
+    <Compile Include="IO\Ocad9\Record\Setting.cs" />
+    <Compile Include="IO\Ocad9\Record\Symbol.cs" />
+    <Compile Include="IO\Ocad9\Type.cs" />
+    <Compile Include="IO\Ocad9\Writer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Setting\Colour.cs" />
+    <Compile Include="Model\Setting\SelectedSpotColoursParameter.cs" />
+    <Compile Include="Model\Setting\DatabaseCreateObjectParameter.cs" />
+    <Compile Include="Model\Setting\DatabaseObject.cs" />
+    <Compile Include="Model\Setting\DatabaseParameter.cs" />
+    <Compile Include="Model\Setting\Dataset.cs" />
+    <Compile Include="Model\Setting\DisplayParameter.cs" />
+    <Compile Include="Model\Setting\EpsParameter.cs" />
+    <Compile Include="Model\Setting\ExportParameter.cs" />
+    <Compile Include="Model\Setting\FileInfo.cs" />
+    <Compile Include="Model\Setting\FileName.cs" />
+    <Compile Include="Model\Setting\FileType.cs" />
+    <Compile Include="Model\Setting\FileVersion.cs" />
+    <Compile Include="Model\Setting\ImportLayer.cs" />
+    <Compile Include="Model\Setting\Miscellaneous.cs" />
+    <Compile Include="Model\Setting\OimFile.cs" />
+    <Compile Include="Model\Setting\OimFind.cs" />
+    <Compile Include="Model\Setting\OimParameter.cs" />
+    <Compile Include="Model\Setting\PrintParameter.cs" />
+    <Compile Include="Model\Setting\ScaleParameter.cs" />
+    <Compile Include="Model\Setting\SpotColour.cs" />
+    <Compile Include="Model\Setting\SymbolTreeNode.cs" />
+    <Compile Include="Model\Setting\Template.cs" />
+    <Compile Include="Model\Setting\TemplateParameter.cs" />
+    <Compile Include="Model\Setting\TiffParameter.cs" />
+    <Compile Include="Model\Setting\TilesParameter.cs" />
+    <Compile Include="Model\Setting\ViewParameter.cs" />
+    <Compile Include="Model\Setting\XmlScriptParameter.cs" />
+    <Compile Include="Model\Setting\Zoom.cs" />
+    <Compile Include="Model\Shape.cs" />
+    <Compile Include="Model\Symbol\AbstractSymbol.cs" />
+    <Compile Include="Model\Symbol\AbstractTextSymbol.cs" />
+    <Compile Include="Model\Symbol\AreaSymbol.cs" />
+    <Compile Include="Model\Symbol\BlockTextSymbol.cs" />
+    <Compile Include="Model\Symbol\LineSymbol.cs" />
+    <Compile Include="Model\Symbol\LineTextSymbol.cs" />
+    <Compile Include="Model\Symbol\PointSymbol.cs" />
+    <Compile Include="Model\Symbol\RectangleSymbol.cs" />
+    <Compile Include="Model\Type.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Geometry\Geometry.csproj">
+      <Project>{5C0698B8-D890-4D45-AD77-5EF1859EA821}</Project>
+      <Name>Geometry</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,402 @@
+Microsoft (R) Xml Schemas/DataTypes support utility
+[Microsoft (R) .NET Framework, Version 2.0.50727.3038]
+Copyright (C) Microsoft Corporation. All rights reserved.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 78, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 137, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 149, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 161, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 188, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 200, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 219, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 232, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 244, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 256, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 268, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 281, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 293, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 305, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 318, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 331, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 343, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 363, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 382, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 395, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 414, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 426, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 438, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 450, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 473, position 8.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 46, position 5.
+Schema validation warning: The derived type and the base type must have the same content type. Line 58, position 3.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureMemberType' is used as a base for complex type extension. Line 70, position 5.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractGMLType' is used as a base for complex type extension. Line 89, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 107, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractGMLType' is used as a base for complex type extension. Line 22, position 8.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 42, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 43, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 49, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 50, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 57, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 58, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 64, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 65, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 79, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 67, position 4.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SignType' is not declared, or is not a simple type. Line 100, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 101, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 102, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 113, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 104, position 4.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SignType' is not declared, or is not a simple type. Line 135, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 136, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 137, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 148, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 139, position 4.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SignType' is not declared, or is not a simple type. Line 174, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 175, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 176, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 186, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 178, position 4.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SignType' is not declared, or is not a simple type. Line 211, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 212, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 213, position 6.
+Schema validation warning: The derived type and the base type must have the same content type. Line 215, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 233, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 246, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 240, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 260, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 273, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 267, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 286, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 299, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 293, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 312, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AggregationAttributeGroup'. Line 330, position 10.
+Schema validation warning: The derived type and the base type must have the same content type. Line 319, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 366, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 367, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 378, position 6.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 384, position 6.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 26, position 5.
+Schema validation warning: The derived type and the base type must have the same content type. Line 39, position 3.
+Schema validation warning: The derived type and the base type must have the same content type. Line 54, position 3.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 85, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 86, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 30, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 39, position 5.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 58, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 78, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 86, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 126, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 135, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 160, position 4.
+Schema validation warning: The derived type and the base type must have the same content type. Line 167, position 3.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 192, position 4.
+Schema validation warning: The derived type and the base type must have the same content type. Line 199, position 3.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 232, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 243, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 296, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 305, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 334, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 343, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 371, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 31, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 46, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 47, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 56, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 57, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 64, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 65, position 4.
+Schema validation warning: The derived type and the base type must have the same content type. Line 72, position 3.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:DefinitionType' is used as a base for complex type extension. Line 24, position 5.
+Schema validation warning: The derived type and the base type must have the same content type. Line 40, position 3.
+Schema validation warning: The derived type and the base type must have the same content type. Line 60, position 3.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:DefinitionType' is used as a base for complex type extension. Line 80, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 97, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 98, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 107, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 108, position 4.
+Schema validation warning: The derived type and the base type must have the same content type. Line 120, position 3.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 139, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 140, position 4.
+Schema validation warning: The derived type and the base type must have the same content type. Line 150, position 3.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:DefinitionType' is used as a base for complex type extension. Line 167, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 186, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 187, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 95, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCoordinateSystemType' is used as a base for complex type extension. Line 257, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 267, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCoordinateSystemType' is used as a base for complex type extension. Line 309, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 319, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 461, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 476, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractCRSType' is used as a base for complex type extension. Line 493, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 511, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:OwnershipAttributeGroup'. Line 655, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 668, position 6.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractGMLType' is used as a base for complex type extension. Line 687, position 5.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractGMLType' is used as a base for complex type extension. Line 705, position 5.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 719, position 4.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:id' attribute is not declared. Line 732, position 4.
+Schema validation warning: Reference to undeclared attribute group 'http://www.opengis.net/gml/3.2:AssociationAttributeGroup'. Line 778, position 4.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type restriction. Line 833, position 5.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:AbstractFeatureType' is used as a base for complex type extension. Line 847, position 5.
+Schema validation warning: Undefined complexType 'http://www.opengis.net/gml/3.2:DefinitionType' is used as a base for complex type extension. Line 911, position 5.
+Schema validation warning: The derived type and the base type must have the same content type. Line 1049, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ReferenceType' is not declared. Line 22, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AssociationRoleType' is not declared. Line 118, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinatesType' is not declared. Line 119, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:doubleOrNilReasonList' is not declared. Line 125, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractCRSType' is not declared. Line 18, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeneralConversionPropertyType' is not declared. Line 46, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EllipsoidalCSPropertyType' is not declared. Line 98, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CartesianCSPropertyType' is not declared. Line 103, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SphericalCSPropertyType' is not declared. Line 108, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeodeticDatumPropertyType' is not declared. Line 113, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalCSPropertyType' is not declared. Line 143, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalDatumPropertyType' is not declared. Line 148, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CodeWithAuthorityType' is not declared. Line 215, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateSystemPropertyType' is not declared. Line 220, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CylindricalCSPropertyType' is not declared. Line 264, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:LinearCSPropertyType' is not declared. Line 269, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PolarCSPropertyType' is not declared. Line 274, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:UserDefinedCSPropertyType' is not declared. Line 279, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EngineeringDatumPropertyType' is not declared. Line 284, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AffineCSPropertyType' is not declared. Line 317, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ImageDatumPropertyType' is not declared. Line 322, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TimeCSPropertyType' is not declared. Line 354, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TemporalDatumPropertyType' is not declared. Line 359, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:NilReasonType' is not declared. Line 13, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CodeType' is not declared. Line 18, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:DatumPropertyType' is not declared. Line 23, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PrimeMeridianPropertyType' is not declared. Line 28, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EllipsoidPropertyType' is not declared. Line 33, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeodeticDatumPropertyType' is not declared. Line 38, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EllipsoidPropertyType' is not declared. Line 43, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PrimeMeridianPropertyType' is not declared. Line 48, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EngineeringDatumPropertyType' is not declared. Line 53, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ImageDatumPropertyType' is not declared. Line 58, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalDatumPropertyType' is not declared. Line 63, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TemporalDatumPropertyType' is not declared. Line 68, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateOperationPropertyType' is not declared. Line 73, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SingleOperationPropertyType' is not declared. Line 78, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractCoordinateOperationType' is not declared. Line 83, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeneralConversionPropertyType' is not declared. Line 102, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeneralTransformationPropertyType' is not declared. Line 107, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateOperationPropertyType' is not declared. Line 112, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ConcatenatedOperationPropertyType' is not declared. Line 117, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateOperationPropertyType' is not declared. Line 122, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PassThroughOperationPropertyType' is not declared. Line 127, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationMethodPropertyType' is not declared. Line 132, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralParameterValuePropertyType' is not declared. Line 137, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ConversionPropertyType' is not declared. Line 142, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TransformationPropertyType' is not declared. Line 147, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationParameterPropertyType' is not declared. Line 157, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralParameterValuePropertyType' is not declared. Line 162, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationParameterGroupPropertyType' is not declared. Line 167, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CodeType' is not declared. Line 172, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralOperationParameterPropertyType' is not declared. Line 177, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationMethodPropertyType' is not declared. Line 182, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralOperationParameterPropertyType' is not declared. Line 187, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationParameterPropertyType' is not declared. Line 192, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralOperationParameterPropertyType' is not declared. Line 197, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:OperationParameterPropertyType' is not declared. Line 202, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CRSPropertyType' is not declared. Line 207, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CRSPropertyType' is not declared. Line 212, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateSystemAxisPropertyType' is not declared. Line 217, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateSystemAxisPropertyType' is not declared. Line 222, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateSystemPropertyType' is not declared. Line 227, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EllipsoidalCSPropertyType' is not declared. Line 232, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CartesianCSPropertyType' is not declared. Line 237, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalCSPropertyType' is not declared. Line 242, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:LinearCSPropertyType' is not declared. Line 274, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:UserDefinedCSPropertyType' is not declared. Line 279, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SphericalCSPropertyType' is not declared. Line 284, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PolarCSPropertyType' is not declared. Line 289, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CylindricalCSPropertyType' is not declared. Line 294, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeneralConversionPropertyType' is not declared. Line 331, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EllipsoidalCSPropertyType' is not declared. Line 346, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CartesianCSPropertyType' is not declared. Line 351, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SphericalCSPropertyType' is not declared. Line 356, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeodeticDatumPropertyType' is not declared. Line 361, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalCSPropertyType' is not declared. Line 366, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:VerticalDatumPropertyType' is not declared. Line 371, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinateSystemPropertyType' is not declared. Line 391, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:EngineeringDatumPropertyType' is not declared. Line 401, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AffineCSPropertyType' is not declared. Line 411, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ImageDatumPropertyType' is not declared. Line 416, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TimeCSPropertyType' is not declared. Line 431, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TemporalDatumPropertyType' is not declared. Line 441, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AssociationRoleType' is not declared. Line 643, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CoordinatesType' is not declared. Line 751, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PointPropertyType' is not declared. Line 756, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CodeType' is not declared. Line 785, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:FeaturePropertyType' is not declared. Line 805, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:FeaturePropertyType' is not declared. Line 810, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:DictionaryType' is not declared. Line 878, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:DictionaryEntryType' is not declared. Line 883, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ReferenceType' is not declared. Line 918, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PointPropertyType' is not declared. Line 939, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PointPropertyType' is not declared. Line 944, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SurfacePropertyType' is not declared. Line 949, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CurvePropertyType' is not declared. Line 954, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CurvePropertyType' is not declared. Line 959, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiPointPropertyType' is not declared. Line 964, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiPointPropertyType' is not declared. Line 969, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiPointPropertyType' is not declared. Line 974, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiCurvePropertyType' is not declared. Line 979, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiCurvePropertyType' is not declared. Line 984, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiSurfacePropertyType' is not declared. Line 989, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiSurfacePropertyType' is not declared. Line 994, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SurfacePatchArrayPropertyType' is not declared. Line 999, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SurfacePatchArrayPropertyType' is not declared. Line 1004, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:AbstractGeneralOperationParameterPropertyType' is not declared. Line 1039, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ReferenceType' is not declared. Line 1078, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiPointPropertyType' is not declared. Line 1088, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiCurvePropertyType' is not declared. Line 1093, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiSurfacePropertyType' is not declared. Line 1098, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiSolidPropertyType' is not declared. Line 1103, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MultiGeometryPropertyType' is not declared. Line 1108, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:PointArrayPropertyType' is not declared. Line 1113, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CurveArrayPropertyType' is not declared. Line 1118, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SurfaceArrayPropertyType' is not declared. Line 1123, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:SolidArrayPropertyType' is not declared. Line 1128, position 3.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:GeometryPropertyType' is not declared. Line 1057, position 8.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:pos' element is not declared. Line 1058, position 8.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:locationName' element is not declared. Line 1059, position 8.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:locationReference' element is not declared. Line 1060, position 8.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MeasureType' is not declared. Line 1063, position 7.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:DirectionPropertyType' is not declared. Line 1064, position 7.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MeasureType' is not declared. Line 1065, position 7.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MeasureType' is not declared. Line 1066, position 7.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractFeature' element is not declared. Line 820, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractGeometry' element is not declared. Line 772, position 6.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractObject' element is not declared. Line 653, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:angle' element is not declared. Line 634, position 5.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TimePositionType' is not declared. Line 45, position 8.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TimeInstantPropertyType' is not declared. Line 46, position 8.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:TimeIntervalLengthType' is not declared. Line 48, position 7.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:direction' element is not declared. Line 76, position 7.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:MeasureType' is not declared. Line 90, position 7.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractFeature' element is not declared. Line 53, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractGeometry' element is not declared. Line 54, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractFeature' element is not declared. Line 44, position 5.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:integerList' is not declared. Line 194, position 5.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:ReferenceType' is not declared. Line 182, position 5.
+Schema validation warning: Type 'http://www.opengis.net/gml/3.2:CodeType' is not declared. Line 153, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:ValueArray' element is not declared. Line 97, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractScalarValueList' element is not declared. Line 98, position 5.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractGeometry' element is not declared. Line 81, position 6.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:AbstractTimeObject' element is not declared. Line 82, position 6.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:solidProperty' element is not declared. Line 184, position 12.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:surfaceProperty' element is not declared. Line 146, position 12.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:curveProperty' element is not declared. Line 111, position 12.
+Schema validation warning: The 'http://www.opengis.net/gml/3.2:pointProperty' element is not declared. Line 77, position 12.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 75, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 134, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 146, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 158, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 185, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 197, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 216, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 229, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 241, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 253, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 265, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 278, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 290, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 302, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 315, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 328, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 340, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 360, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 379, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 392, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 411, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 423, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 435, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 447, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 470, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 38, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:DynamicFeatureCollection' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:DynamicFeature'. Line 51, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 78, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 25, position 4.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:Node' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTopoPrimitive'. Line 83, position 4.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:Edge' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTopoPrimitive'. Line 117, position 4.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:Face' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTopoPrimitive'. Line 157, position 4.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TopoSolid' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTopoPrimitive'. Line 195, position 4.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TopoComplex' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTopology'. Line 334, position 4.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 34, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:AbstractDiscreteCoverage' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractCoverage'. Line 48, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 63, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 103, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 130, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 158, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 172, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 185, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 18, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:AbstractGeneralDerivedCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 32, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 51, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:GeodeticCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 80, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:VerticalCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 128, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:ProjectedCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractGeneralDerivedCRS'. Line 162, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:DerivedCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractGeneralDerivedCRS'. Line 194, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:EngineeringCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 234, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:ImageCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 298, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TemporalCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 336, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 18, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:DirectedObservation' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:Observation'. Line 67, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 17, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TimeCoordinateSystem' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:TimeReferenceSystem'. Line 31, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TimeCalendar' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:TimeReferenceSystem'. Line 53, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TimeClock' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:TimeReferenceSystem'. Line 110, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:TimeOrdinalReferenceSystem' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:TimeReferenceSystem'. Line 142, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 18, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 28, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 33, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 83, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 112, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 122, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 132, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 137, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 157, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 162, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 167, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 172, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesParameter' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:generalOperationParameter'. Line 177, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 197, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 222, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 247, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 299, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:definedByConversion' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:conversion'. Line 331, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesEllipsoidalCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:ellipsoidalCS'. Line 346, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesCartesianCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:cartesianCS'. Line 351, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesSphericalCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:sphericalCS'. Line 356, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesGeodeticDatum' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:geodeticDatum'. Line 361, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesVerticalCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:verticalCS'. Line 366, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesVerticalDatum' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:verticalDatum'. Line 371, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:coordinateSystem'. Line 391, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesEngineeringDatum' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:engineeringDatum'. Line 401, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesAffineCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:affineCS'. Line 411, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesImageDatum' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:imageDatum'. Line 416, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesTimeCS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:timeCS'. Line 431, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:usesTemporalDatum' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:temporalDatum'. Line 441, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:GeographicCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 451, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:GeocentricCRS' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractSingleCRS'. Line 483, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 677, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 695, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 722, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 855, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 860, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 878, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 883, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 901, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 999, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 1004, position 3.
+Schema validation warning: Reference to undeclared substitution group affiliation. Line 1039, position 3.
+Schema validation warning: 'http://www.opengis.net/gml/3.2:MovingObjectStatus' cannot be a member of substitution group with head element 'http://www.opengis.net/gml/3.2:AbstractTimeSlice'. Line 1044, position 3.
+
+Warning: Schema could not be validated. Class generation may fail or may produce incorrect results.
+
+
+If you would like more help, please type "xsd /?".

@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" xmlns:vmd="http://namespaces.ordnancesurvey.co.uk/vmd/v1.0" elementFormDefault="qualified" targetNamespace="http://namespaces.ordnancesurvey.co.uk/vmd/v1.0" version="1.1.0">
+	<annotation>
+		<appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+			<gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+		</appinfo>
+	</annotation>  
+<!--
+      <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="gml.xsd"/>
+      <import namespace="http://www.opengis.net/gmlsf/2.0" schemaLocation="gmlsfLevels.xsd"/>
+-->
+
+  <simpleType name="RoadClassificationValueType">
+    <restriction base="string">
+      <enumeration value="Motorway"/>
+      <enumeration value="Primary Road"/>
+      <enumeration value="A Road"/>
+      <enumeration value="B Road"/>
+      <enumeration value="Minor Road"/>
+      <enumeration value="Local Street"/>
+      <enumeration value="Private Road Publicly Accessible"/>
+      <enumeration value="Pedestrianised Street"/>
+      <enumeration value="Motorway, Collapsed Dual Carriageway"/>
+      <enumeration value="Primary Road, Collapsed Dual Carriageway"/>
+      <enumeration value="A Road, Collapsed Dual Carriageway"/>
+      <enumeration value="B Road, Collapsed Dual Carriageway"/>
+      <enumeration value="Minor Road, Collapsed Dual Carriageway"/>
+      <enumeration value="Local Street, Collapsed Dual Carriageway"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="TidalBoundaryClassificationValueType">
+    <restriction base="string">
+      <enumeration value="High Water Mark"/>
+      <enumeration value="Low Water Mark"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="AdministrativeBoundaryClassificationValueType">
+    <restriction base="string">
+      <enumeration value="National"/>
+      <enumeration value="Parish Or Community"/>
+      <enumeration value="District Or London Borough"/>
+      <enumeration value="County Or Region Or Island"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="RailwayTrackClassificationValueType">
+    <restriction base="string">
+      <enumeration value="Multi Track"/>
+      <enumeration value="Single Track"/>
+      <enumeration value="Narrow Gauge"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="RailwayStationClassificationValueType">
+    <restriction base="string">
+      <enumeration value="Light Rapid Transit Station"/>
+      <enumeration value="Railway Station"/>
+      <enumeration value="London Underground Station"/>
+      <enumeration value="Railway Station And London Underground Station"/>
+      <enumeration value="Light Rapid Transit Station And Railway Station"/>
+      <enumeration value="Light Rapid Transit Station And London Underground Station"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="PublicAmenityClassificationValueType">
+    <restriction base="string">
+      <enumeration value="Education Facility"/>
+      <enumeration value="Place Of Worship"/>
+      <enumeration value="Leisure Or Sports Centre"/>
+      <enumeration value="Police Station"/>
+      <enumeration value="Hospital"/>
+    </restriction>
+  </simpleType>
+
+
+  <element name="FeatureCollection" substitutionGroup="gml:AbstractFeature" type="vmd:FeatureCollectionType"/>
+  <complexType name="FeatureCollectionType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="metadata">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractMetadataPropertyType">
+                  <sequence>
+                    <!-- <element ref="gmd:MD_Metadata"/> -->
+                    <!-- in practice, we'll only ever 'populate' via xlink:href -->
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <sequence minOccurs="0" maxOccurs="unbounded">
+            <element name="featureMember">
+              <complexType>
+                <complexContent>
+                  <extension base="gml:AbstractFeatureMemberType">
+                    <choice>
+                      <element ref="vmd:Building"/>
+                      <element ref="vmd:Glasshouse"/>
+                      <element ref="vmd:Road"/>
+                      <element ref="vmd:RoadTunnel"/>
+                      <element ref="vmd:Roundabout"/>
+                      <element ref="vmd:MotorwayJunction"/>
+                      <element ref="vmd:SurfaceWater_Line"/>
+                      <element ref="vmd:SurfaceWater_Area"/>
+                      <element ref="vmd:TidalWater"/>
+                      <element ref="vmd:TidalBoundary"/>
+                      <element ref="vmd:Foreshore"/>
+                      <element ref="vmd:Land"/>
+                      <element ref="vmd:AdministrativeBoundary"/>
+                      <element ref="vmd:RailwayTrack"/>
+                      <element ref="vmd:RailwayTunnel"/>
+                      <element ref="vmd:RailwayStation"/>
+                      <element ref="vmd:Airport"/>
+                      <element ref="vmd:PublicAmenity"/>
+                      <element ref="vmd:HeritageSite"/>
+                      <element ref="vmd:Woodland"/>
+                      <element ref="vmd:Ornament"/>
+                      <element ref="vmd:ElectricityTransmissionLine"/>
+                      <element ref="vmd:NamedPlace"/>
+                      <element ref="vmd:SpotHeight"/>
+                    </choice>
+                  </extension>
+                </complexContent>
+              </complexType>
+            </element>
+          </sequence>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Building" substitutionGroup="gml:AbstractFeature" type="vmd:BuildingType"/>
+  <complexType name="BuildingType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Glasshouse" substitutionGroup="gml:AbstractFeature" type="vmd:GlasshouseType"/>
+  <complexType name="GlasshouseType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Road" substitutionGroup="gml:AbstractFeature" type="vmd:RoadType"/>
+  <complexType name="RoadType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="dftNumber">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="classification" type="vmd:RoadClassificationValueType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="RoadTunnel" substitutionGroup="gml:AbstractFeature" type="vmd:RoadTunnelType"/>
+  <complexType name="RoadTunnelType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="MotorwayJunction" substitutionGroup="gml:AbstractFeature" type="vmd:MotorwayJunctionType"/>
+  <complexType name="MotorwayJunctionType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="junctionNumber">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Roundabout" substitutionGroup="gml:AbstractFeature" type="vmd:RoundaboutType"/>
+  <complexType name="RoundaboutType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:RoadClassificationValueType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="SurfaceWater_Line" substitutionGroup="gml:AbstractFeature" type="vmd:SurfaceWater_LineType"/>
+  <complexType name="SurfaceWater_LineType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="SurfaceWater_Area" substitutionGroup="gml:AbstractFeature" type="vmd:SurfaceWater_AreaType"/>
+  <complexType name="SurfaceWater_AreaType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="TidalWater" substitutionGroup="gml:AbstractFeature" type="vmd:TidalWaterType"/>
+  <complexType name="TidalWaterType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="TidalBoundary" substitutionGroup="gml:AbstractFeature" type="vmd:TidalBoundaryType"/>
+  <complexType name="TidalBoundaryType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:TidalBoundaryClassificationValueType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Foreshore" substitutionGroup="gml:AbstractFeature" type="vmd:ForeshoreType"/>
+  <complexType name="ForeshoreType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Land" substitutionGroup="gml:AbstractFeature" type="vmd:LandType"/>
+  <complexType name="LandType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="AdministrativeBoundary" substitutionGroup="gml:AbstractFeature" type="vmd:AdministrativeBoundaryType"/>
+  <complexType name="AdministrativeBoundaryType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:AdministrativeBoundaryClassificationValueType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="RailwayTrack" substitutionGroup="gml:AbstractFeature" type="vmd:RailwayTrackType"/>
+  <complexType name="RailwayTrackType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:RailwayTrackClassificationValueType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="RailwayTunnel" substitutionGroup="gml:AbstractFeature" type="vmd:RailwayTunnelType"/>
+  <complexType name="RailwayTunnelType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="RailwayStation" substitutionGroup="gml:AbstractFeature" type="vmd:RailwayStationType"/>
+  <complexType name="RailwayStationType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:RailwayStationClassificationValueType"/>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Airport" substitutionGroup="gml:AbstractFeature" type="vmd:AirportType"/>
+  <complexType name="AirportType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="PublicAmenity" substitutionGroup="gml:AbstractFeature" type="vmd:PublicAmenityType"/>
+  <complexType name="PublicAmenityType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="classification" type="vmd:PublicAmenityClassificationValueType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="HeritageSite" substitutionGroup="gml:AbstractFeature" type="vmd:HeritageSiteType"/>
+  <complexType name="HeritageSiteType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Woodland" substitutionGroup="gml:AbstractFeature" type="vmd:WoodlandType"/>
+  <complexType name="WoodlandType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="Ornament" substitutionGroup="gml:AbstractFeature" type="vmd:OrnamentType"/>
+  <complexType name="OrnamentType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="ElectricityTransmissionLine" substitutionGroup="gml:AbstractFeature" type="vmd:ElectricityTransmissionLineType"/>
+  <complexType name="ElectricityTransmissionLineType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="NamedPlace" substitutionGroup="gml:AbstractFeature" type="vmd:NamedPlaceType"/>
+  <complexType name="NamedPlaceType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="name">
+            <simpleType>
+              <restriction base="string">
+                <maxLength value="254" /> 
+              </restriction>
+            </simpleType>
+          </element>
+          <element name="orientation" type="integer"/>
+          <element name="fontColour" type="integer"/>
+          <element name="fontHeight" type="integer"/>
+          <element name="fontType" type="integer"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <element name="SpotHeight" substitutionGroup="gml:AbstractFeature" type="vmd:SpotHeightType"/>
+  <complexType name="SpotHeightType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="height" type="double"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/> 
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+
+</schema>

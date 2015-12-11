@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ocad.Import.Osm" GeneratedClassName="Setting">
+  <Profiles />
+  <Settings>
+    <Setting Name="BridgeTagKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">bridge</Value>
+    </Setting>
+    <Setting Name="TunnelTagKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tunnel</Value>
+    </Setting>
+    <Setting Name="Conversion" Type="Ocad.Import.Osm.Conversion" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MinimumRealWorldMetreWidthOfBridge" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="AdditionalRealWorldMetreWidthOfBridge" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
