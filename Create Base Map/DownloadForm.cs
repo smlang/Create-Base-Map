@@ -191,7 +191,6 @@ namespace CreateBaseMap
                 maxCount += 1;
             }
 
-
             TDPG.GeoCoordConversion.GridReference imageCenter = centreOSGridReferenceUserControl.Value;
             TDPG.GeoCoordConversion.GridReference swCorner = new TDPG.GeoCoordConversion.GridReference(imageCenter.Easting - (_widthKm * 500), imageCenter.Northing - (_heightKm * 500));
 

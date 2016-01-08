@@ -49,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.downloadProgressBar.Location = new System.Drawing.Point(12, 12);
             this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.Size = new System.Drawing.Size(455, 23);
+            this.downloadProgressBar.Size = new System.Drawing.Size(445, 23);
             this.downloadProgressBar.TabIndex = 1;
             // 
             // buildBackgroundWorker
@@ -63,14 +63,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 68);
+            this.ClientSize = new System.Drawing.Size(469, 67);
             this.ControlBox = false;
             this.Controls.Add(this.downloadProgressBar);
             this.Controls.Add(this.messageLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(485, 94);
-            this.MinimumSize = new System.Drawing.Size(485, 94);
+            this.MaximumSize = new System.Drawing.Size(485, 106);
+            this.MinimumSize = new System.Drawing.Size(485, 106);
             this.Name = "ProgressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Progress";

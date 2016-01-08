@@ -27,13 +27,11 @@ namespace CreateBaseMap
         #region Enter User Control
         internal void Start()
         {
-            _parent.infoLabel.Text = "(1) Specify the centre of the new master map\n(2) Select a OCAD9 file containing the desired map symbols.";
+            _parent.infoLabel.Text = "(1) Select a OCAD9 file containing the desired map symbols\n(2) Set centre to file's centre if it is using British National Grid coordinates";
             this.selectOcadFileButton.Focus();
 
-#if DEBUG
-            selectOcadFileDialog.FileName = @"..\..\..\MDOC Street Symbols 15000.ocd";
+            selectOcadFileDialog.FileName = GetRecordedFilePath();
             LoadOcad(selectOcadFileDialog.FileName);
-#endif
         }
         #endregion
 
@@ -48,30 +46,39 @@ namespace CreateBaseMap
 
         private void LoadOcad(string fileName)
         {
-            if (!fileName.Equals(previousOcadFile))
+            if (fileName.Equals(previousOcadFile))
             {
-                selectOcadFileTextBox.Text = Path.GetFileName(fileName);
-
-                using (_progress = new ProgressForm(LoadOcadProcess))
-                {
-                    if (_progress.ShowDialog() != DialogResult.OK)
-                    {
-                        return;
-                    }
-                }
-
-                if ((_parent.OcadMap.ScaleParameter != null) &&
-                    (_parent.OcadMap.ScaleParameter.RealWorldOffsetX != null) &&
-                    (_parent.OcadMap.ScaleParameter.RealWorldOffsetY != null) &&
-                    ((!_parent.OcadMap.ScaleParameter.RealWorldCoordinateSystem.HasValue) || (_parent.OcadMap.ScaleParameter.RealWorldCoordinateSystem.Value == Ocad.Model.Type.CoordinateSystemType.UK_NationalGrid)))
-                {
-                    osGridReferenceUserControl.Value = new TDPG.GeoCoordConversion.GridReference(
-                        (long)_parent.OcadMap.ScaleParameter.RealWorldOffsetX[0, Geometry.Distance.Unit.Metre, Geometry.Scale.one],
-                        (long)_parent.OcadMap.ScaleParameter.RealWorldOffsetY[0, Geometry.Distance.Unit.Metre, Geometry.Scale.one]);
-                }
-
-                previousOcadFile = fileName;
+                return;
             }
+            selectOcadFileTextBox.Text = Path.GetFileName(fileName);
+
+            using (_progress = new ProgressForm(LoadOcadProcess))
+            {
+                if (_progress.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+            }
+
+            if (_parent.OcadMap == null)
+            {
+                selectOcadFileTextBox.Text = String.Empty;
+                return;
+            }
+
+            if ((_parent.OcadMap.ScaleParameter != null) &&
+                (_parent.OcadMap.ScaleParameter.RealWorldOffsetX != null) &&
+                (_parent.OcadMap.ScaleParameter.RealWorldOffsetY != null) &&
+                ((!_parent.OcadMap.ScaleParameter.RealWorldCoordinateSystem.HasValue) || (_parent.OcadMap.ScaleParameter.RealWorldCoordinateSystem.Value == Ocad.Model.Type.CoordinateSystemType.UK_NationalGrid)))
+            {
+                osGridReferenceUserControl.Value = new TDPG.GeoCoordConversion.GridReference(
+                    (long)_parent.OcadMap.ScaleParameter.RealWorldOffsetX[0, Geometry.Distance.Unit.Metre, Geometry.Scale.one],
+                    (long)_parent.OcadMap.ScaleParameter.RealWorldOffsetY[0, Geometry.Distance.Unit.Metre, Geometry.Scale.one]);
+            }
+
+            previousOcadFile = fileName;
+
+            SetRecordedFilePath(fileName);
         }
 
         private void LoadOcadProcess()
@@ -81,7 +88,42 @@ namespace CreateBaseMap
             _parent.OcadMap.Templates.Clear();
             _parent.OcadMap.Objects.Clear();
             _parent.OcadMap.FileInfos.Clear();
-            _parent.OcadMap.FileInfos.Add(new Ocad.Model.FileInfo() { Value = String.Format("Created by Steve Lang's Make Master Map at {0}", DateTime.Now) });
+            _parent.OcadMap.FileInfos.Add(new Ocad.Model.FileInfo() { Value = String.Format("Created by Steve Lang's Create Base Map at {0}", DateTime.Now) });
+        }
+
+        private static string GetRecordedFilePath()
+        {
+            Microsoft.Win32.RegistryKey hkcu = Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.CurrentUser, Microsoft.Win32.RegistryView.Registry32);
+            Microsoft.Win32.RegistryKey appkey = hkcu.OpenSubKey(@"stevelang.name\Create Base Map");
+            string filePath = null;
+            if (appkey != null)
+            {
+                filePath = appkey.GetValue("OCAD Symbol File Path") as string;
+            }
+            if (String.IsNullOrEmpty(filePath))
+            {
+                filePath = "Default Street Symbols 15000.ocd";
+            }
+            return filePath;
+        }
+
+        private static void SetRecordedFilePath(string filePath)
+        {
+            Microsoft.Win32.RegistryKey hkcu = Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.CurrentUser, Microsoft.Win32.RegistryView.Registry32);
+            Microsoft.Win32.RegistryKey appkey = hkcu.OpenSubKey(@"stevelang.name\Create Base Map", true);
+            if (appkey == null)
+            {
+                appkey = hkcu.CreateSubKey(@"stevelang.name\Create Base Map");
+                appkey.SetValue("OCAD Symbol File Path", filePath);
+            }
+            else
+            {
+                string previousRecordedFilePath = appkey.GetValue("OCAD Symbol File Path") as string;
+                if (String.IsNullOrEmpty(previousRecordedFilePath) || !previousRecordedFilePath.Equals(filePath))
+                {
+                    appkey.SetValue("OCAD Symbol File Path", filePath);
+                }
+            }
         }
         #endregion
 

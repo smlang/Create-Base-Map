@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CreateBaseMap</RootNamespace>
-    <AssemblyName>CreateBaseMap</AssemblyName>
+    <AssemblyName>Create Base Map</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -134,7 +134,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Default Street Symbols 15000.ocd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="License.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -146,10 +154,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ApplicationIcon.ico" />
+    <None Include="ApplicationIcon.ico" />
     <None Include="Resources\ApplicationIcon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Esri.Model\Esri.Model.csproj">
+      <Project>{5dfd42ce-b93e-4098-9434-50dd556f5ebe}</Project>
+      <Name>Esri.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Geometry\Geometry.csproj">
       <Project>{5C0698B8-D890-4D45-AD77-5EF1859EA821}</Project>
       <Name>Geometry</Name>

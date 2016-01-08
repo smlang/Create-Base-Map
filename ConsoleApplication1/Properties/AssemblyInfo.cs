@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Create Base Map")]
-[assembly: AssemblyDescription("Build a draft master map for Street Orienteering event based on OSM and OS data; and include GeoTIFF background images.")]
+[assembly: AssemblyTitle("ConsoleApplication1")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("stevelang.name")]
-[assembly: AssemblyProduct("Create Base Map")]
-[assembly: AssemblyCopyright("Copyright © stevelang.name 2016")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ConsoleApplication1")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("833d44ad-bba1-4909-8b25-a0d9151e56af")]
+[assembly: Guid("3a571dce-011c-42a1-ba63-fd1f7e0909ba")]
 
 // Version information for an assembly consists of the following four values:
 //

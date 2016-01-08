@@ -43,7 +43,7 @@
             // 
             this.selectOcadFileDialog.DefaultExt = "*.ocd";
             this.selectOcadFileDialog.Filter = "OCAD9|*.ocd";
-            this.selectOcadFileDialog.Title = "OCAD File with MDOC Street Symbols";
+            this.selectOcadFileDialog.Title = "OCAD File with Symbols";
             // 
             // selectOcadFileButton
             // 
