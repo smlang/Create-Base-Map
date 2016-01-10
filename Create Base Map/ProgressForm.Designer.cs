@@ -49,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.downloadProgressBar.Location = new System.Drawing.Point(12, 12);
             this.downloadProgressBar.Name = "downloadProgressBar";
-            this.downloadProgressBar.Size = new System.Drawing.Size(445, 23);
+            this.downloadProgressBar.Size = new System.Drawing.Size(435, 23);
             this.downloadProgressBar.TabIndex = 1;
             // 
             // buildBackgroundWorker

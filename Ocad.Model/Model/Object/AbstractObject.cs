@@ -314,7 +314,7 @@ namespace Ocad.Model
                 }
                 else
                 {
-                    path.Add(new CubicBezierCurve(p1, p1.SecondBezier, p2, p2.FirstBezier), epsilon);
+                    path.Add(new CubicBezierCurve(p1, p1.SecondBezier, p2, p2.FirstBezier, epsilon), epsilon);
                 }
 
                 p1 = p2;
@@ -346,7 +346,7 @@ namespace Ocad.Model
                 }
                 else
                 {
-                    segments.Add(new CubicBezierCurve(p1, p1.SecondBezier, p2, p2.FirstBezier));
+                    segments.Add(new CubicBezierCurve(p1, p1.SecondBezier, p2, p2.FirstBezier, epsilon));
                 }
 
                 p1 = p2;

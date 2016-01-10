@@ -48,7 +48,7 @@ namespace CreateBaseMap
                 string directoryPath = Path.GetDirectoryName(FilePath);
                 switch (Path.GetExtension(FilePath))
                 {
-                    case ".xml":
+                    case ".gml":
                         fileType = "OS";
                         break;
                     case ".ocd":
@@ -229,7 +229,7 @@ namespace CreateBaseMap
                         osmModel.CopyTo(_parent.OcadMap);
                         break;
 
-                    case ".xml":
+                    case ".gml":
 
                         _progress.buildBackgroundWorker.ReportProgress(100 * count / maxCount, String.Format("Adding OS map {0}...", Path.GetFileNameWithoutExtension(dataSourceFilePath)));
 

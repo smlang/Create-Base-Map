@@ -53,7 +53,7 @@
 		<codepage>1252</codepage>
 		<title>##ID_STRING3##</title>
 		<subject></subject>
-		<author>InstallShield</author>
+		<author>##ID_STRING10##</author>
 		<keywords>Installer</keywords>
 		<comments>Contact:  Your local administrator</comments>
 		<template>Intel;1033</template>
@@ -225,6 +225,7 @@
 	<table name="AppSearch">
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
+		<row><td>DOTNETVERSION40FULL</td><td>DotNet40Full</td></row>
 	</table>
 
 	<table name="BBControl">
@@ -345,7 +346,7 @@
 		<row><td>ISO19770_LocalTag</td><td>{64059689-1096-482B-BAA6-ACC315DA88ED}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISO19770_SystemTag</td><td>{66B2CA0B-4112-4F18-B7FE-3836CD9DDDD0}</td><td>CommonAppDataFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{282575E7-071A-44A0-A35B-2BCEB5AF482E}</td><td>ProgramFiles64Folder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{42DA5FBA-21B6-4EA8-B116-3F3C807DE8A8}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{42DA5FBA-21B6-4EA8-B116-3F3C807DE8A8}</td><td>INSTALLDIR</td><td>2</td><td/><td>default_street_symbols_15000</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{74DD9198-7D23-4ADC-BC84-9C381B7AD0CB}</td><td>ProgramFilesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{8B07BBB6-27FC-4695-AC83-92070FE20555}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
@@ -1162,11 +1163,8 @@
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
 		<row><td>INSTALLDIR</td><td>CREATE_BASE_MAP</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
-		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
-		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
-		<row><td>MY_PRODUCT_NAME</td><td>STEVELANG.NAME</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
@@ -1189,8 +1187,7 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>create_base_map_installer</td><td>stevelang.name</td><td>Create Base Map Installer</td><td/><td>1</td><td/></row>
-		<row><td>stevelang.name</td><td>ProgramMenuFolder</td><td>stevelang.name</td><td/><td>1</td><td/></row>
+		<row><td>create_base_map_installer</td><td>ProgramMenuFolder</td><td>Create Base Map</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1906,6 +1903,8 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>create_base_map.content_file</td><td>Create_Base_Map.Content_Files</td><td>Create Base Map.Content Files</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Create Base Map&gt;|ContentFiles</td><td>3</td><td/></row>
 		<row><td>create_base_map.primary_outp</td><td>Create_Base_Map.Primary_output</td><td>Create Base Map.Primary output</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Create Base Map&gt;|Built</td><td>3</td><td/></row>
+		<row><td>default_street_symbols_15000</td><td>ISX_DEFAULTCOMPONENT1</td><td>Default Street Symbols 15000.ocd</td><td>0</td><td/><td/><td/><td>1</td><td>D:\OneDrive\Private\Steve\Documents\My Code\Create Base Map\Create Base Map\Default Street Symbols 15000.ocd</td><td>1</td><td/></row>
+		<row><td>mdoc_street_legend_15000.ocd</td><td>ISX_DEFAULTCOMPONENT1</td><td>MDOC Street Legend 15000.ocd</td><td>0</td><td/><td/><td/><td>1</td><td>D:\OneDrive\Private\Steve\Documents\My Code\Create Base Map\Create Base Map\MDOC Street Legend 15000.ocd</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2646,9 +2645,11 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>stevelang.name</td><td>0</td><td/><td>1084535656</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>stevelang.name</td><td>0</td><td/><td>1084514516</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>1084508744</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>1084543188</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40FULL</td><td>1033</td><td>Microsoft .NET Framework 4.0 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>1218761226</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>1084548424</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>1084508744</td></row>
@@ -3460,6 +3461,7 @@
 		<row><td>IDS_SETUPEXE_EXPIRE_MSG</td><td>1033</td><td>This setup works until %s. The setup will now exit.</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDS_SETUPEXE_LAUNCH_COND_E</td><td>1033</td><td>This setup was built with an evaluation version of InstallShield and can only be launched from setup.exe.</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>1033</td><td>Create Base Map</td><td>0</td><td/><td>1084501800</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>Launch |ContentFiles</td><td>0</td><td/><td>1218710505</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>1084508744</td></row>
@@ -3749,15 +3751,22 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>1084508744</td></row>
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>1084510792</td></row>
+		<row><td>ID_STRING10</td><td>1033</td><td>stevelang.name</td><td>0</td><td/><td>1084514516</td></row>
+		<row><td>ID_STRING11</td><td>1033</td><td>Default Street Symbols 15000</td><td>0</td><td/><td>1218751561</td></row>
+		<row><td>ID_STRING12</td><td>1033</td><td>MDOC Street Legend 15000</td><td>0</td><td/><td>1218725001</td></row>
+		<row><td>ID_STRING13</td><td>1033</td><td/><td>0</td><td/><td>1218761961</td></row>
+		<row><td>ID_STRING14</td><td>1033</td><td>Default Street Symbols 15000</td><td>0</td><td/><td>1218743561</td></row>
+		<row><td>ID_STRING15</td><td>1033</td><td>MDOC Street Legend 15000</td><td>0</td><td/><td>1218725449</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td/><td>0</td><td/><td>1084549896</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Create Base Map Installation</td><td>0</td><td/><td>1084544008</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Create Base Map</td><td>0</td><td/><td>1084490952</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>Create Base Map</td><td>0</td><td/><td>1084511432</td></row>
-		<row><td>ID_STRING6</td><td>1033</td><td>http://stevelang.name</td><td>0</td><td/><td>1084517929</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>http://www.stevelang.name.com</td><td>0</td><td/><td>1084514516</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>1084530440</td></row>
 		<row><td>ID_STRING8</td><td>1033</td><td/><td>0</td><td/><td>1084512040</td></row>
 		<row><td>ID_STRING9</td><td>1033</td><td/><td>0</td><td/><td>1084518697</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>1084508744</td></row>
+		<row><td>UNINST|Uninstall Create Base Map</td><td>1033</td><td>Uninstall Create Base Map</td><td>0</td><td/><td>1084530419</td></row>
 	</table>
 
 	<table name="ISSwidtagProperty">
@@ -3873,8 +3882,9 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>NewShortcut3_33E23C9CBC41427E9DFA9D388E130B93.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Create Base Map\docicon.ico</td><td>0</td></row>
+		<row><td>NewShortcut4_516CFA6540354A3BACC6410FEBC6EF22.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Create Base Map\docicon.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_C_2256201C55944FCE9AB6B81CD402B626.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_C_BFE8D21F9FA84DBA892A4E4D015DC410.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>_Built1_7E56F2A6008D4348B3AD9636D9306217.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Create Base Map\ApplicationIcon.ico</td><td>0</td></row>
 		<row><td>_Built_8D3D719BAC8B4412B624D72B500E5294.exe</td><td/><td>&lt;VSSolutionFolder&gt;\Create Base Map\ApplicationIcon.ico</td><td>0</td></row>
 	</table>
@@ -4069,6 +4079,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 	<table name="LaunchCondition">
 		<col key="yes" def="s255">Condition</col>
 		<col def="l255">Description</col>
+		<row><td>(Not Version9X) And (Not ((VersionNT&gt;=400 And VersionNT&lt;=502) Or (VersionNT=600 And MsiNTProductType&gt;1)))</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_OS##</td></row>
+		<row><td>DOTNETVERSION40FULL&gt;="#1"</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40FULL##</td></row>
 	</table>
 
 	<table name="ListBox">
@@ -4389,7 +4401,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]Create Base Map.Primary output</td><td/></row>
 		<row><td>ProductCode</td><td>{6EE84B12-FACF-41A2-AAAD-F6A83DAF5509}</td><td/></row>
-		<row><td>ProductName</td><td>Create Base Map Installer</td><td/></row>
+		<row><td>ProductName</td><td>Create Base Map</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
@@ -4403,7 +4415,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION40FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{AE9BA747-6C9F-42FD-8551-2D7B5425B458}</td><td/></row>
@@ -4448,6 +4460,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s255">Key</col>
 		<col def="S255">Name</col>
 		<col def="I2">Type</col>
+		<row><td>DotNet40Full</td><td>2</td><td>SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full</td><td>Install</td><td>2</td></row>
 	</table>
 
 	<table name="Registry">
@@ -4468,6 +4481,12 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="i2">InstallMode</col>
 		<row><td>FileKey1</td><td>Create_Base_Map.Primary_output</td><td/><td>stevelang.name</td><td>2</td></row>
 		<row><td>FileKey2</td><td>Create_Base_Map.Primary_output</td><td/><td>create_base_map_installer</td><td>2</td></row>
+		<row><td>FileKey3</td><td>Create_Base_Map.Content_Files</td><td/><td>stevelang.name</td><td>2</td></row>
+		<row><td>FileKey4</td><td>Create_Base_Map.Content_Files</td><td/><td>create_base_map</td><td>2</td></row>
+		<row><td>NewShortcut1</td><td>ISX_DEFAULTCOMPONENT1</td><td/><td>create_base_map_installer</td><td>2</td></row>
+		<row><td>NewShortcut2</td><td>ISX_DEFAULTCOMPONENT1</td><td/><td>create_base_map_installer</td><td>2</td></row>
+		<row><td>NewShortcut3</td><td>ISX_DEFAULTCOMPONENT1</td><td/><td>create_base_map_installer</td><td>2</td></row>
+		<row><td>NewShortcut4</td><td>ISX_DEFAULTCOMPONENT1</td><td/><td>create_base_map_installer</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Create_Base_Map_Installer</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>create_base_map_installer</td><td>2</td></row>
 		<row><td>_Built</td><td>Create_Base_Map.Primary_output</td><td/><td>create_base_map_installer</td><td>2</td></row>
 	</table>
@@ -4555,8 +4574,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>UNINST_Uninstall_Create_Base_Map_Installer</td><td>create_base_map_installer</td><td>UNINST|Uninstall Create Base Map Installer</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {6EE84B12-FACF-41A2-AAAD-F6A83DAF5509}</td><td/><td/><td>UNINST_Uninstall_C_2256201C55944FCE9AB6B81CD402B626.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>UNINST_Uninstall_Create_Base_Map_Installer1</td><td>DesktopFolder</td><td>UNINST|Uninstall Create Base Map Installer</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {6EE84B12-FACF-41A2-AAAD-F6A83DAF5509}</td><td/><td/><td>UNINST_Uninstall_C_BFE8D21F9FA84DBA892A4E4D015DC410.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut3</td><td>create_base_map_installer</td><td>##ID_STRING14##</td><td>ISX_DEFAULTCOMPONENT1</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut3_33E23C9CBC41427E9DFA9D388E130B93.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut4</td><td>create_base_map_installer</td><td>##ID_STRING15##</td><td>ISX_DEFAULTCOMPONENT1</td><td>[INSTALLDIR]MDOC Street Legend 15000.ocd</td><td/><td/><td/><td>NewShortcut4_516CFA6540354A3BACC6410FEBC6EF22.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>UNINST_Uninstall_Create_Base_Map_Installer</td><td>create_base_map_installer</td><td>UNINST|Uninstall Create Base Map</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {6EE84B12-FACF-41A2-AAAD-F6A83DAF5509}</td><td/><td/><td>UNINST_Uninstall_C_2256201C55944FCE9AB6B81CD402B626.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>_Built</td><td>create_base_map_installer</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>Create_Base_Map.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built_8D3D719BAC8B4412B624D72B500E5294.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>_Built1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>Create_Base_Map.Primary_output</td><td>AlwaysInstall</td><td/><td/><td/><td>_Built1_7E56F2A6008D4348B3AD9636D9306217.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>

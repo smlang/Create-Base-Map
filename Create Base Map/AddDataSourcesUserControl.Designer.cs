@@ -120,7 +120,7 @@
             // selectFileDialog
             // 
             this.selectFileDialog.DefaultExt = "*.osm";
-            this.selectFileDialog.Filter = "Common files|*.osm;*.xml;*.ocd;*.tif|OSM files|*.osm|OS files|*.xml|OCAD9 files|*" +
+            this.selectFileDialog.Filter = "Common files|*.osm;*.gml;*.ocd;*.tif|OSM files|*.osm|OS GML files|*.gml|OCAD9 files|*" +
     ".ocd|GeoTiff files|*.tif|All files|*.*";
             this.selectFileDialog.Multiselect = true;
             this.selectFileDialog.Title = "Select OSM, OS, OCAD9 or GeoTiff Files";
