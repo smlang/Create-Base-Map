@@ -170,6 +170,32 @@ namespace Geometry
             Convert(a, b, out aValue, out bValue, out unit, out scale);
             return aValue >= bValue;
         }
+
+        public static Distance Max(Distance a, params Distance[] list)
+        {
+            Distance max = a;
+            foreach (Distance b in list)
+            {
+                if (b > max)
+                {
+                    max = b;
+                }
+            }
+            return max;
+        }
+
+        public static Distance Min(Distance a, params Distance[] list)
+        {
+            Distance min = a;
+            foreach (Distance b in list)
+            {
+                if (b < min)
+                {
+                    min = b;
+                }
+            }
+            return min;
+        }
         #endregion
 
         #region Index

@@ -338,7 +338,7 @@ namespace Geometry
             return true;
         }
 
-        private Point IntermediatePoint(Decimal ratio)
+        internal Point IntermediatePoint(Decimal ratio)
         {
             return (new Point(Start.X + (ratio * (End.X - Start.X)), Start.Y + (ratio * (End.Y - Start.Y))));
         }
