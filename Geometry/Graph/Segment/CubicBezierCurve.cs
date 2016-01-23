@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Geometry
 {
+    // https://pomax.github.io/bezierinfo/
+
     public class CubicBezierCurve : ISegment
     {
         private Point _start;

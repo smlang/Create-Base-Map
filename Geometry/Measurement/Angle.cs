@@ -141,6 +141,24 @@ namespace Geometry
             return !(a == b);
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj is Angle)
+            {
+                return (this == ((Angle)obj));
+            }
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            if (_unit == Unit.Radian)
+            {
+                return _value.GetHashCode();
+            }
+            return this[Unit.Radian].GetHashCode();
+        }
+
         public static bool operator <(Angle a, Angle b)
         {
             Decimal aValue;

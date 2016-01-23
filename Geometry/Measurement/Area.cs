@@ -8,13 +8,13 @@ namespace Geometry
     {
         public readonly static Area Zero = new Area(0, Distance.Unit.Metre, Scale.ten_minus_5);
 
-        private Decimal _value;
+        public decimal Value;
         private Distance.Unit _unitSquared;
         private Scale _scale;
 
-        public Area(Decimal value, Distance.Unit unitSquared, Scale scale)
+        public Area(decimal value, Distance.Unit unitSquared, Scale scale)
         {
-            _value = value;
+            Value = value;
             _unitSquared = unitSquared;
             _scale = scale;
         }
@@ -22,20 +22,20 @@ namespace Geometry
         #region Unary
         public static Area operator +(Area a)
         {
-            return new Area(+a._value, a._unitSquared, a._scale);
+            return new Area(+a.Value, a._unitSquared, a._scale);
         }
 
         public static Area operator -(Area a)
         {
-            return new Area(-a._value, a._unitSquared, a._scale);
+            return new Area(-a.Value, a._unitSquared, a._scale);
         }
         #endregion
 
         #region Binary
         public static Area operator +(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -44,28 +44,28 @@ namespace Geometry
 
         public static Area operator -(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
             return new Area(aValue - bValue, unitSquared, scale);
         }
 
-        public static Area operator *(Area a, Decimal b)
+        public static Area operator *(Area a, decimal b)
         {
-            return new Area(a._value * b, a._unitSquared, a._scale);
+            return new Area(a.Value * b, a._unitSquared, a._scale);
         }
 
-        public static Area operator *(Decimal a, Area b)
+        public static Area operator *(decimal a, Area b)
         {
-            return new Area(a * b._value, b._unitSquared, b._scale);
+            return new Area(a * b.Value, b._unitSquared, b._scale);
         }
 
-        public static Decimal operator /(Area a, Area b)
+        public static decimal operator /(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -74,23 +74,23 @@ namespace Geometry
 
         public static Distance operator /(Area a, Distance b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unit;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unit, out scale);
             return new Distance(aValue / bValue, unit, scale);
         }
 
-        public static Area operator /(Area a, Decimal b)
+        public static Area operator /(Area a, decimal b)
         {
-            return new Area(a._value / b, a._unitSquared, a._scale);
+            return new Area(a.Value / b, a._unitSquared, a._scale);
         }
 
         public static Area operator %(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -113,8 +113,8 @@ namespace Geometry
                 return false;
             }
 
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -126,10 +126,28 @@ namespace Geometry
             return !(a == b);
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj is Area)
+            {
+                return (this == ((Area)obj));
+            }
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            if ((_unitSquared == Distance.Unit.Metre) && (_scale == Scale.ten_minus_5))
+            {
+                return Value.GetHashCode();
+            }
+            return this[Distance.Unit.Metre, Scale.ten_minus_5].GetHashCode();
+        }
+
         public static bool operator <(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -138,8 +156,8 @@ namespace Geometry
 
         public static bool operator >(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -148,8 +166,8 @@ namespace Geometry
 
         public static bool operator <=(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -158,8 +176,8 @@ namespace Geometry
 
         public static bool operator >=(Area a, Area b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Distance.Unit unitSquared;
             Scale scale;
             Convert(a, b, out aValue, out bValue, out unitSquared, out scale);
@@ -168,7 +186,7 @@ namespace Geometry
         #endregion
 
         #region Index
-        public Decimal this[Distance.Unit unitSquared]
+        public decimal this[Distance.Unit unitSquared]
         {
             get
             {
@@ -176,17 +194,17 @@ namespace Geometry
                 {
                     throw (new NotImplementedException());
                 }
-                return _value;
+                return Value;
             }
         }
 
-        public Decimal this[Scale scale]
+        public decimal this[Scale scale]
         {
             get
             {
                 int change = (int)_scale - (int)scale;
 
-                decimal value = _value;
+                decimal value = Value;
                 if (change < 0)
                 {
                     for (int i = 0; i != change; i--)
@@ -206,7 +224,7 @@ namespace Geometry
             }
         }
 
-        public Decimal this[Distance.Unit unitSquared, Scale scale]
+        public decimal this[Distance.Unit unitSquared, Scale scale]
         {
             get
             {
@@ -219,7 +237,7 @@ namespace Geometry
             }
         }
 
-        public Decimal this[Int32 precision, Distance.Unit unitSquared, Scale scale]
+        public decimal this[Int32 precision, Distance.Unit unitSquared, Scale scale]
         {
             get
             {
@@ -227,7 +245,7 @@ namespace Geometry
             }
         }
 
-        internal protected static void Convert(Area a, Area b, out Decimal aValue, out Decimal bValue, out Distance.Unit unitSquared, out Scale scale)
+        internal protected static void Convert(Area a, Area b, out decimal aValue, out decimal bValue, out Distance.Unit unitSquared, out Scale scale)
         {
             if (a._unitSquared != b._unitSquared)
             {
@@ -236,14 +254,14 @@ namespace Geometry
 
             if (a._scale == b._scale)
             {
-                aValue = a._value;
-                bValue = b._value;
+                aValue = a.Value;
+                bValue = b.Value;
                 unitSquared = a._unitSquared;
                 scale = a._scale;
             }
             else if (a._scale <= b._scale)
             {
-                aValue = a._value;
+                aValue = a.Value;
                 bValue = b[a._unitSquared, a._scale];
                 unitSquared = a._unitSquared;
                 scale = a._scale;
@@ -251,15 +269,15 @@ namespace Geometry
             else
             {
                 aValue = a[b._unitSquared, b._scale];
-                bValue = b._value;
+                bValue = b.Value;
                 unitSquared = b._unitSquared;
                 scale = b._scale;
             }
         }
 
-        internal protected static void Convert(Area a, Distance b, out Decimal aValue, out Decimal bValue, out Distance.Unit unitSquared, out Scale scale)
+        internal protected static void Convert(Area a, Distance b, out decimal aValue, out decimal bValue, out Distance.Unit unitSquared, out Scale scale)
         {
-            aValue = a._value;
+            aValue = a.Value;
             bValue = b[a._unitSquared, a._scale];
             unitSquared = a._unitSquared;
             scale = a._scale;
@@ -267,13 +285,13 @@ namespace Geometry
 
         public void Convert(Scale scale)
         {
-            _value = this[_unitSquared, scale];
+            Value = this[_unitSquared, scale];
             _scale = scale;
         }
 
         public void Convert(Distance.Unit unitSquared, Scale scale)
         {
-            _value = this[unitSquared, scale];
+            Value = this[unitSquared, scale];
             _unitSquared = unitSquared;
             _scale = scale;
         }
@@ -336,7 +354,7 @@ namespace Geometry
         private Boolean IsZero(Area epsilon)
         {
             Area x = this.Absolute() - epsilon;
-            return (x._value < 0);
+            return (x.Value < 0);
         }
 
         private Boolean IsPositive(Area epsilon)
@@ -345,7 +363,7 @@ namespace Geometry
             {
                 return false;
             }
-            return (this._value > 0);
+            return (this.Value > 0);
         }
 
         private Boolean IsNegative(Area epsilon)
@@ -354,7 +372,7 @@ namespace Geometry
             {
                 return false;
             }
-            return (this._value < 0);
+            return (this.Value < 0);
         }
 
         // Positive or Zero
@@ -364,7 +382,7 @@ namespace Geometry
             {
                 return true;
             }
-            return (this._value > 0);
+            return (this.Value > 0);
         }
 
         // Negative or Zero
@@ -374,7 +392,7 @@ namespace Geometry
             {
                 return true;
             }
-            return (this._value < 0);
+            return (this.Value < 0);
         }
 
         private Boolean IsEqualTo(Area a, Area epsilon)
@@ -389,7 +407,7 @@ namespace Geometry
             {
                 return false;
             }
-            return (difference._value < 0);
+            return (difference.Value < 0);
         }
 
         private Boolean IsGreaterThan(Area a, Area epsilon)
@@ -399,7 +417,7 @@ namespace Geometry
             {
                 return false;
             }
-            return (difference._value > 0);
+            return (difference.Value > 0);
         }
 
         // Less Than or Equal
@@ -410,7 +428,7 @@ namespace Geometry
             {
                 return true;
             }
-            return (difference._value <= 0);
+            return (difference.Value <= 0);
         }
 
         // Greater Than or Equal
@@ -421,26 +439,26 @@ namespace Geometry
             {
                 return true;
             }
-            return (difference._value >= 0);
+            return (difference.Value >= 0);
         }
         #endregion
 
         public Area Absolute()
         {
-            return new Area(Math.Abs(_value), _unitSquared, _scale);
+            return new Area(Math.Abs(Value), _unitSquared, _scale);
         }
 
         public int Sign
         {
             get
             {
-                return Math.Sign(_value);
+                return Math.Sign(Value);
             }
         }
 
         public Distance SquareRoot()
         {
-            return new Distance((Decimal)Math.Sqrt((double)_value), _unitSquared, _scale);
+            return new Distance((decimal)Math.Sqrt((double)Value), _unitSquared, _scale);
         }
     }
 }
