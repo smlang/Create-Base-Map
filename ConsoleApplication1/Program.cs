@@ -10,7 +10,14 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Esri.Model.Map.Import(@"D:\OS\Vector\ESRI\OSTerrain50 SD99\SJ99_line.shp");
+            int? x = null;
+            int? y = null;
+
+            if (x == y)
+            {
+                Console.Write("true");
+            }
+            //Esri.Model.Map.Import(@"D:\OS\Vector\ESRI\OSTerrain50 SD99\SJ99_line.shp");
         }
     }
 }

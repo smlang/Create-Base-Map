@@ -605,6 +605,36 @@ namespace Geometry_Test
         }
 
         [TestMethod]
+        public void ConvertScaleZero()
+        {
+            // Arrange
+            decimal x = 0;
+
+            // Act
+            for (int scale = 0; scale <= _scales.GetUpperBound(0); scale++)
+            {
+                Distance d = new Distance(x, Distance.Unit.Metre, Scale.ten_minus_5);
+                d.Convert(_scales[scale]);
+                decimal actual = d.Value;
+
+                // Assert
+                decimal expected = x / (decimal)Math.Pow(10.0, scale);
+                Assert.AreEqual(actual, expected);
+            }
+
+            for (int scale = _scales.GetUpperBound(0); scale >= 0; scale--)
+            {
+                Distance d = new Distance(x, Distance.Unit.Metre, Scale.kilo);
+                d.Convert(_scales[scale]);
+                decimal actual = d[_scales[scale]];
+
+                // Assert
+                decimal expected = 0;
+                Assert.AreEqual(actual, expected);
+            }
+        }
+
+        [TestMethod]
         public void ConvertUnitConvertScale()
         {
             // Arrange
@@ -852,6 +882,297 @@ namespace Geometry_Test
                 // Assert
                 decimal expected = a.Value / x;
                 Assert.AreEqual(actual, expected);
+            }
+        }
+
+        [TestMethod]
+        public void BinaryReminderDistanceByDistance()
+        {
+            // Arrange
+            decimal x = 0.0123456789M;
+
+            for (int scaleA = 0; scaleA <= _scales.GetUpperBound(0); scaleA++)
+            {
+                for (int scaleB = 0; scaleB <= _scales.GetUpperBound(0); scaleB++)
+                {
+                    // Act
+                    Distance a = new Distance(x, Distance.Unit.Metre, _scales[scaleA]);
+                    Distance b = new Distance(x, Distance.Unit.Metre, _scales[scaleB]);
+                    Distance c = a % b;
+                    decimal actual = c.Value;
+
+                    // Assert
+                    // Convert to lowest scale
+                    if (scaleA < scaleB)
+                    {
+                        b.Convert(Distance.Unit.Metre, _scales[scaleA]);
+                    }
+                    else if (scaleA > scaleB)
+                    {
+                        a.Convert(Distance.Unit.Metre, _scales[scaleB]);
+                    }
+                    decimal expected = a.Value % b.Value;
+                    Assert.AreEqual(actual, expected);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void BinaryReminderDistanceByDecimal()
+        {
+            // Arrange
+            decimal x = 0.0123456789M;
+
+            for (int scaleA = 0; scaleA <= _scales.GetUpperBound(0); scaleA++)
+            {
+                // Act
+                Distance a = new Distance(x, Distance.Unit.Metre, _scales[scaleA]);
+                Distance c = a % x;
+                decimal actual = c.Value;
+
+                // Assert
+                decimal expected = a.Value % x;
+                Assert.AreEqual(actual, expected);
+            }
+        }
+
+        [TestMethod]
+        public void ComparisonsNulls()
+        {
+            // Arrange
+            Distance x = null;
+            Distance y = null;
+
+            // Act
+            bool actualEquals = (x == y);
+            bool actualNotEquals = (x != y);
+            bool actualNotGreaterThan = (x <= y);
+            bool actualLessThan = (x < y);
+            bool actualNotLessThan = (x >= y);
+            bool actualGreaterThan = (x > y);
+
+            // Assert
+            bool expectedEquals = true;
+            Assert.AreEqual(actualEquals, expectedEquals);
+
+            bool expectedNotEquals = false;
+            Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+            bool expectedNotGreaterThan = false;
+            Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+            bool expectedLessThan = false;
+            Assert.AreEqual(actualLessThan, expectedLessThan);
+
+            bool expectedNotLessThan = false;
+            Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+            bool expectedGreaterThan = false;
+            Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+        }
+
+        [TestMethod]
+        public void ComparisonsFirstNull()
+        {
+            // Arrange
+            Distance x = null;
+            Distance y = new Distance(1, Distance.Unit.Metre, Scale.ten_minus_5);
+
+            // Act
+            bool actualEquals = (x == y);
+            bool actualNotEquals = (x != y);
+            bool actualNotGreaterThan = (x <= y);
+            bool actualLessThan = (x < y);
+            bool actualNotLessThan = (x >= y);
+            bool actualGreaterThan = (x > y);
+
+            // Assert
+            bool expectedEquals = false;
+            Assert.AreEqual(actualEquals, expectedEquals);
+
+            bool expectedNotEquals = true;
+            Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+            bool expectedNotGreaterThan = false;
+            Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+            bool expectedLessThan = false;
+            Assert.AreEqual(actualLessThan, expectedLessThan);
+
+            bool expectedNotLessThan = false;
+            Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+            bool expectedGreaterThan = false;
+            Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+        }
+
+        [TestMethod]
+        public void ComparisonsSecondNull()
+        {
+            // Arrange
+            Distance x = new Distance(1, Distance.Unit.Metre, Scale.ten_minus_5);
+            Distance y = null;
+
+            // Act
+            bool actualEquals = (x == y);
+            bool actualNotEquals = (x != y);
+            bool actualNotGreaterThan = (x <= y);
+            bool actualLessThan = (x < y);
+            bool actualNotLessThan = (x >= y);
+            bool actualGreaterThan = (x > y);
+
+            // Assert
+            bool expectedEquals = false;
+            Assert.AreEqual(actualEquals, expectedEquals);
+
+            bool expectedNotEquals = true;
+            Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+            bool expectedNotGreaterThan = false;
+            Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+            bool expectedLessThan = false;
+            Assert.AreEqual(actualLessThan, expectedLessThan);
+
+            bool expectedNotLessThan = false;
+            Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+            bool expectedGreaterThan = false;
+            Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+        }
+
+        [TestMethod]
+        public void ComparisonsDifferentScalesSame()
+        {
+            // Arrange
+            decimal x = 0.0123456789M;
+            decimal y = 0.0123456789M;
+
+            // Act
+            for (int xscale = 0; xscale <= _scales.GetUpperBound(0); xscale++)
+            {
+                Distance xd = new Distance(x, Distance.Unit.Metre, _scales[xscale]);
+                for (int yscale = 0; yscale <= _scales.GetUpperBound(0); yscale++)
+                {
+                    Distance yd = new Distance(y, Distance.Unit.Metre, _scales[yscale]);
+
+                    // Act
+                    bool actualEquals = (x == y);
+                    bool actualNotEquals = (x != y);
+                    bool actualNotGreaterThan = (x <= y);
+                    bool actualLessThan = (x < y);
+                    bool actualNotLessThan = (x >= y);
+                    bool actualGreaterThan = (x > y);
+
+                    // Assert
+                    bool expectedEquals = true;
+                    Assert.AreEqual(actualEquals, expectedEquals);
+
+                    bool expectedNotEquals = false;
+                    Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+                    bool expectedNotGreaterThan = true;
+                    Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+                    bool expectedLessThan = false;
+                    Assert.AreEqual(actualLessThan, expectedLessThan);
+
+                    bool expectedNotLessThan = true;
+                    Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+                    bool expectedGreaterThan = false;
+                    Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void ComparisonsDifferentScalesLargerX()
+        {
+            // Arrange
+            decimal x = 0.0123456789M;
+            decimal y = -0.0123456789M;
+
+            // Act
+            for (int xscale = 0; xscale <= _scales.GetUpperBound(0); xscale++)
+            {
+                Distance xd = new Distance(x, Distance.Unit.Metre, _scales[xscale]);
+                for (int yscale = 0; yscale <= _scales.GetUpperBound(0); yscale++)
+                {
+                    Distance yd = new Distance(y, Distance.Unit.Metre, _scales[yscale]);
+
+                    // Act
+                    bool actualEquals = (x == y);
+                    bool actualNotEquals = (x != y);
+                    bool actualNotGreaterThan = (x <= y);
+                    bool actualLessThan = (x < y);
+                    bool actualNotLessThan = (x >= y);
+                    bool actualGreaterThan = (x > y);
+
+                    // Assert
+                    bool expectedEquals = false;
+                    Assert.AreEqual(actualEquals, expectedEquals);
+
+                    bool expectedNotEquals = true;
+                    Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+                    bool expectedNotGreaterThan = false;
+                    Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+                    bool expectedLessThan = false;
+                    Assert.AreEqual(actualLessThan, expectedLessThan);
+
+                    bool expectedNotLessThan = true;
+                    Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+                    bool expectedGreaterThan = true;
+                    Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+                }
+            }
+        }
+
+        [TestMethod]
+        public void ComparisonsDifferentScalesSmallerX()
+        {
+            // Arrange
+            decimal x = -0.0123456789M;
+            decimal y = 0.0123456789M;
+
+            // Act
+            for (int xscale = 0; xscale <= _scales.GetUpperBound(0); xscale++)
+            {
+                Distance xd = new Distance(x, Distance.Unit.Metre, _scales[xscale]);
+                for (int yscale = 0; yscale <= _scales.GetUpperBound(0); yscale++)
+                {
+                    Distance yd = new Distance(y, Distance.Unit.Metre, _scales[yscale]);
+
+                    // Act
+                    bool actualEquals = (x == y);
+                    bool actualNotEquals = (x != y);
+                    bool actualNotGreaterThan = (x <= y);
+                    bool actualLessThan = (x < y);
+                    bool actualNotLessThan = (x >= y);
+                    bool actualGreaterThan = (x > y);
+
+                    // Assert
+                    bool expectedEquals = false;
+                    Assert.AreEqual(actualEquals, expectedEquals);
+
+                    bool expectedNotEquals = true;
+                    Assert.AreEqual(actualNotEquals, expectedNotEquals);
+
+                    bool expectedNotGreaterThan = true;
+                    Assert.AreEqual(actualNotGreaterThan, expectedNotGreaterThan);
+
+                    bool expectedLessThan = true;
+                    Assert.AreEqual(actualLessThan, expectedLessThan);
+
+                    bool expectedNotLessThan = false;
+                    Assert.AreEqual(actualNotLessThan, expectedNotLessThan);
+
+                    bool expectedGreaterThan = false;
+                    Assert.AreEqual(actualGreaterThan, expectedGreaterThan);
+                }
             }
         }
     }

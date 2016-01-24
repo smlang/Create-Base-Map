@@ -119,7 +119,7 @@ namespace Geometry
         public static bool operator ==(Distance a, Distance b)
         {
             // If both are null, or both are same instance, return true.
-            if (System.Object.ReferenceEquals(a, b))
+            if (ReferenceEquals(a, b))
             {
                 return true;
             }
@@ -163,6 +163,11 @@ namespace Geometry
 
         public static bool operator <(Distance a, Distance b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Unit unit;
@@ -173,6 +178,11 @@ namespace Geometry
 
         public static bool operator >(Distance a, Distance b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Unit unit;
@@ -183,6 +193,11 @@ namespace Geometry
 
         public static bool operator <=(Distance a, Distance b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Unit unit;
@@ -193,6 +208,11 @@ namespace Geometry
 
         public static bool operator >=(Distance a, Distance b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Unit unit;

@@ -16,10 +16,10 @@ namespace Geometry
             Radian
         }
 
-        internal protected Decimal _value;
+        internal protected decimal _value;
         internal protected Unit _unit;
 
-        public Angle(Decimal value, Unit unit)
+        public Angle(decimal value, Unit unit)
         {
             _value = value;
             _unit = unit;
@@ -64,8 +64,8 @@ namespace Geometry
         #region Binary
         public static Angle operator +(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return new Angle(aValue + bValue, unit);
@@ -73,41 +73,41 @@ namespace Geometry
 
         public static Angle operator -(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return new Angle(aValue - bValue, unit);
         }
 
-        public static Angle operator *(Angle a, Decimal b)
+        public static Angle operator *(Angle a, decimal b)
         {
             return new Angle(a._value * b, a._unit);
         }
 
-        public static Angle operator *(Decimal a, Angle b)
+        public static Angle operator *(decimal a, Angle b)
         {
             return new Angle(a * b._value, b._unit);
         }
 
-        public static Decimal operator /(Angle a, Angle b)
+        public static decimal operator /(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return aValue / bValue;
         }
 
-        public static Angle operator /(Angle a, Decimal b)
+        public static Angle operator /(Angle a, decimal b)
         {
             return new Angle(a._value / b, a._unit);
         }
 
         public static Angle operator %(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return new Angle(a._value % bValue, unit);
@@ -129,8 +129,8 @@ namespace Geometry
                 return false;
             }
 
-            Decimal aValue;
-            Decimal bValue;
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return (aValue == bValue);
@@ -141,28 +141,15 @@ namespace Geometry
             return !(a == b);
         }
 
-        public override bool Equals(object obj)
-        {
-            if (obj is Angle)
-            {
-                return (this == ((Angle)obj));
-            }
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            if (_unit == Unit.Radian)
-            {
-                return _value.GetHashCode();
-            }
-            return this[Unit.Radian].GetHashCode();
-        }
-
         public static bool operator <(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return aValue < bValue;
@@ -170,8 +157,13 @@ namespace Geometry
 
         public static bool operator >(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return aValue > bValue;
@@ -179,8 +171,13 @@ namespace Geometry
 
         public static bool operator <=(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return aValue <= bValue;
@@ -188,8 +185,13 @@ namespace Geometry
 
         public static bool operator >=(Angle a, Angle b)
         {
-            Decimal aValue;
-            Decimal bValue;
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
+            decimal aValue;
+            decimal bValue;
             Unit unit;
             Convert(a, b, out aValue, out bValue, out unit);
             return aValue >= bValue;
@@ -197,7 +199,7 @@ namespace Geometry
         #endregion
 
         #region Index
-        public Decimal this[Unit unit]
+        public decimal this[Unit unit]
         {
             get
             {
@@ -209,7 +211,7 @@ namespace Geometry
             }
         }
 
-        public Decimal this[Int32 precision, Unit unit]
+        public decimal this[Int32 precision, Unit unit]
         {
             get
             {
@@ -217,7 +219,7 @@ namespace Geometry
             }
         }
 
-        internal protected static void Convert(Angle a, Angle b, out Decimal aValue, out Decimal bValue, out Unit unit)
+        internal protected static void Convert(Angle a, Angle b, out decimal aValue, out decimal bValue, out Unit unit)
         {
             if (a._unit != b._unit)
             {

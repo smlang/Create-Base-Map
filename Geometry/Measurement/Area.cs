@@ -126,26 +126,13 @@ namespace Geometry
             return !(a == b);
         }
 
-        public override bool Equals(object obj)
-        {
-            if (obj is Area)
-            {
-                return (this == ((Area)obj));
-            }
-            return base.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            if ((_unitSquared == Distance.Unit.Metre) && (_scale == Scale.ten_minus_5))
-            {
-                return Value.GetHashCode();
-            }
-            return this[Distance.Unit.Metre, Scale.ten_minus_5].GetHashCode();
-        }
-
         public static bool operator <(Area a, Area b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Distance.Unit unitSquared;
@@ -156,6 +143,11 @@ namespace Geometry
 
         public static bool operator >(Area a, Area b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Distance.Unit unitSquared;
@@ -166,6 +158,11 @@ namespace Geometry
 
         public static bool operator <=(Area a, Area b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Distance.Unit unitSquared;
@@ -176,6 +173,11 @@ namespace Geometry
 
         public static bool operator >=(Area a, Area b)
         {
+            if ((a == null) || (b == null))
+            {
+                return false;
+            }
+
             decimal aValue;
             decimal bValue;
             Distance.Unit unitSquared;
