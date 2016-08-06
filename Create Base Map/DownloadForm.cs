@@ -13,7 +13,7 @@ namespace CreateBaseMap
     internal partial class DownloadForm : Form
     {
         private static readonly Regex distanceRegex = new Regex(@"^\d{1,2}$");
-        private const string TIFF_URL_PATH_FORMAT = "http://d2.roadworks.org/g.1.dynamic.live/wms?LAYERS=MasterMap_Area-ORA_Line-SHP&FORMAT=image%2Fgif&TILED=false&SRS=EPSG%3A81989&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&EXCEPTIONS=application%2Fvnd.ogc.se_inimage&BBOX={0},{1},{2},{3}&WIDTH={4}&HEIGHT={5}";
+        private const string TIFF_URL_PATH_FORMAT = "http://maps.cheshire.gov.uk/tithemaps/MapTile.ashx?e={0}&n={1}&scale={3}&w={2}&h={2}&layers=Modern";
         private const string OSM_URL_PATH_FORMAT = "http://www.overpass-api.de/api/xapi_meta?*[bbox={0},{1},{2},{3}]";
 
         internal System.Collections.Specialized.StringCollection FileList { get; private set; }
@@ -181,11 +181,7 @@ namespace CreateBaseMap
                 Directory.CreateDirectory(destinationFolderPath);
             }
 
-            int maxCount = 0;
-            if (roadworksCheckBox.Checked)
-            {
-                maxCount += _widthKm * _heightKm;
-            }
+            int maxCount = 1;
             if (osmCheckBox.Checked)
             {
                 maxCount += 1;
@@ -197,32 +193,55 @@ namespace CreateBaseMap
             #region Download Roadworks
             if (roadworksCheckBox.Checked)
             {
+
+                double imageScale = 0.5;
+                int imagePixelWidth = 1000;
+                int offset = (int)(imagePixelWidth * imageScale);
+
+                int eastingCorrection = (int)(swCorner.Easting + (offset / 2)) % offset;
+                int eastingMax = (eastingCorrection == 0) ? (int)(_widthKm / imageScale) : (int)(_widthKm / imageScale) + 1;
+                int northingCorrection = (int)(swCorner.Northing + (offset / 2)) % offset;
+                int northingMax = (northingCorrection == 0) ? (int)(_heightKm / imageScale) : (int)(_heightKm / imageScale) + 1;
+                TDPG.GeoCoordConversion.GridReference imageSWCorner = new TDPG.GeoCoordConversion.GridReference(swCorner.Easting - eastingCorrection, swCorner.Northing - northingCorrection);
+
+                int imageCount = eastingMax * northingMax;
+                maxCount += imageCount;
+
                 int count = 1;
-                for (int x = 0; x < _widthKm; x++)
+                for (int eastingIndex = 0; eastingIndex < eastingMax; eastingIndex++)
                 {
-                    for (int y = 0; y < _heightKm; y++)
+                    long leftEasting = imageSWCorner.Easting + (eastingIndex * offset);
+                    long midEasting = leftEasting + (offset / 2);
+                    //long rightEasting = leftEasting + offset / 2;
+
+                    for (int northingIndex = 0; northingIndex < northingMax; northingIndex++)
                     {
                         _progress.buildBackgroundWorker.ReportProgress(100 * count / maxCount,
-                            String.Format("Downloading Roadworks Image {0}/{1}...", count, _widthKm * _heightKm));
+                            String.Format("Downloading Background Image {0}/{1}...", count, imageCount));
                         count++;
 
-                        TDPG.GeoCoordConversion.GridReference origin = new TDPG.GeoCoordConversion.GridReference(swCorner.Easting + (x * 1000), swCorner.Northing + (y * 1000));
+                        long bottomNorthing = imageSWCorner.Northing + (northingIndex * offset);
+                        long midNorthing = bottomNorthing + (offset / 2);
+                        long topNorthing = bottomNorthing + offset;
+
+                        TDPG.GeoCoordConversion.GridReference midGridReference = new TDPG.GeoCoordConversion.GridReference(midEasting, midNorthing);
                         string letters, eastNumber, northNumber;
-                        origin.GetGridReference(out letters, out eastNumber, out northNumber);
-                        string tiffFileName = String.Format("Roadworks_{0}_{1}_{2}.tif", letters, eastNumber, northNumber, _widthKm, _heightKm);
+                        midGridReference.GetGridReference(out letters, out eastNumber, out northNumber);
+                        string tiffFileName = String.Format("Image_{0}_{1:000}_{2:000}.tif", letters, eastNumber.PadRight(3,'0'), northNumber.PadRight(3, '0'));
                         string tiffFilePath = Path.Combine(destinationFolderPath, tiffFileName);
 
                         if (overwriteCheckBox.Checked || !File.Exists(tiffFilePath))
                         {
-                            string urlPath = String.Format(TIFF_URL_PATH_FORMAT, (int)(origin.Easting), (int)(origin.Northing), (int)(origin.Easting) + 1000, (int)(origin.Northing) + 1000, 1000, 1000);
+                            string urlPath = String.Format(TIFF_URL_PATH_FORMAT, midEasting, midNorthing, imagePixelWidth, imageScale);
 
                             string tempfilename = Path.GetTempFileName();
 
                             Tiff.GeoTagBaseMap.Download(
                                 urlPath,
-                                (int)(origin.Easting),
-                                (int)(origin.Northing) + 1000,
-                                1000,
+                                (int)leftEasting,
+                                (int)topNorthing,
+                                imageScale,
+                                imagePixelWidth,
                                 tiffFilePath);
                         }
                         FileList.Add(tiffFilePath);

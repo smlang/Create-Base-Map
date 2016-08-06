@@ -10,13 +10,13 @@ namespace Tiff
     {
         private const int km = 1000;
 
-        public static void Download(string urlPath, int osLeftEasting, int osTopNorthing, int imagePixelPerKm, string destinationFilePath)
+        public static void Download(string urlPath, int osLeftEasting, int osTopNorthing, double imageScale, int imagePixelWidth, string destinationFilePath)
         {
             string tempfilename = Path.GetTempFileName();
 
             using (Net.Resource resource = new Net.Resource(urlPath))
             {
-                using (Bitmap allBmp = new Bitmap(imagePixelPerKm, imagePixelPerKm))
+                using (Bitmap allBmp = new Bitmap(imagePixelWidth, imagePixelWidth))
                 {
                     using (Graphics allGraphics = Graphics.FromImage(allBmp))
                     {
@@ -43,7 +43,7 @@ namespace Tiff
 
             ConvertImageToTiff(tempfilename, destinationFilePath);
 
-            Double metersPerPixel = ((Double)km) / ((Double)imagePixelPerKm);
+            Double metersPerPixel = ((Double)km) / (imagePixelWidth / imageScale);
             Tiff.GeoTag.Add(destinationFilePath, osLeftEasting, osTopNorthing, metersPerPixel);
         }
 

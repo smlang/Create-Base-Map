@@ -143,6 +143,11 @@ namespace Geometry
             return !(a == b);
         }
 
+        public bool Equals(Distance obj)
+        {
+            return (this == obj);
+        }
+
         public override bool Equals(object obj)
         {
             if (obj is Distance)

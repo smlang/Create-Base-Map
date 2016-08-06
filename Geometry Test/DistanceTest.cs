@@ -673,10 +673,11 @@ namespace Geometry_Test
                 Distance d = new Distance(i, Distance.Unit.Metre, Scale.ten_minus_5);
 
                 // Act
-                Distance actual = (+d);
+                d = +d;
+                decimal actual = d.Value;
 
                 // Assert
-                Distance expected = new Distance(i, Distance.Unit.Metre, Scale.ten_minus_5);
+                decimal expected = i;
                 Assert.AreEqual(actual, expected);
             }
         }
@@ -690,10 +691,11 @@ namespace Geometry_Test
                 Distance d = new Distance(i, Distance.Unit.Metre, Scale.ten_minus_5);
 
                 // Act
-                Distance actual = (-d);
+                d = -d;
+                decimal actual = d.Value;
 
                 // Assert
-                Distance expected = new Distance(-i, Distance.Unit.Metre, Scale.ten_minus_5);
+                decimal expected = -i;
                 Assert.AreEqual(actual, expected);
             }
         }
