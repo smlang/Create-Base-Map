@@ -13,6 +13,7 @@ namespace CreateBaseMap
     internal partial class DownloadForm : Form
     {
         private static readonly Regex distanceRegex = new Regex(@"^\d{1,2}$");
+        // http://tiles4.arcgis.com/tiles/qHLhLQrcvEnxjtPr/arcgis/rest/services/OS_Open_Raster/MapServer/tile/16/6030/8286
         private const string TIFF_URL_PATH_FORMAT = "http://maps.cheshire.gov.uk/tithemaps/MapTile.ashx?e={0}&n={1}&scale={3}&w={2}&h={2}&layers=Modern";
         private const string OSM_URL_PATH_FORMAT = "http://www.overpass-api.de/api/xapi_meta?*[bbox={0},{1},{2},{3}]";
 
@@ -190,8 +191,8 @@ namespace CreateBaseMap
             TDPG.GeoCoordConversion.GridReference imageCenter = centreOSGridReferenceUserControl.Value;
             TDPG.GeoCoordConversion.GridReference swCorner = new TDPG.GeoCoordConversion.GridReference(imageCenter.Easting - (_widthKm * 500), imageCenter.Northing - (_heightKm * 500));
 
-            #region Download Roadworks
-            if (roadworksCheckBox.Checked)
+            #region Download Images
+            if (imagesCheckBox.Checked)
             {
 
                 double imageScale = 0.5;
@@ -302,9 +303,9 @@ namespace CreateBaseMap
             #endregion
         }
 
-        private void roadworksOrOsmCheckBox_CheckedChanged(object sender, EventArgs e)
+        private void imagesOrOsmCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            bool enableDownload = (roadworksCheckBox.Checked || osmCheckBox.Checked);
+            bool enableDownload = (imagesCheckBox.Checked || osmCheckBox.Checked);
             if (downloadButton.Enabled != enableDownload)
             {
                 downloadButton.Enabled = enableDownload;

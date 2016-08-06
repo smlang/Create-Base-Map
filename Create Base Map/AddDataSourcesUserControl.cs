@@ -26,7 +26,7 @@ namespace CreateBaseMap
         #region Enter User Control
         internal void Start()
         {
-            _parent.infoLabel.Text = "(1) Add OSM maps, (2) Add OS maps, (3) Add OCAD maps, (4) Add GeoTiff images, (5) Download and add OSM maps, and (6) Download and add Roadworks GeoTiff images.\n";
+            _parent.infoLabel.Text = "(1) Add OSM maps, (2) Add OS maps, (3) Add OCAD maps, (4) Add GeoTiff images, (5) Download and add OSM maps, and (6) Download and add Background GeoTiff images.\n";
             FileListBox.Focus();
         }
         #endregion

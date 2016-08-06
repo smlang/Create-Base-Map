@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DownloadForm));
-            this.roadworksCheckBox = new System.Windows.Forms.CheckBox();
+            this.imagesCheckBox = new System.Windows.Forms.CheckBox();
             this.osmCheckBox = new System.Windows.Forms.CheckBox();
             this.centreLabel = new System.Windows.Forms.Label();
             this.heightLabel = new System.Windows.Forms.Label();
@@ -47,17 +47,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // roadworksCheckBox
+            // imagesCheckBox
             // 
-            this.roadworksCheckBox.AutoSize = true;
-            this.roadworksCheckBox.Location = new System.Drawing.Point(34, 90);
-            this.roadworksCheckBox.Name = "roadworksCheckBox";
-            this.roadworksCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.roadworksCheckBox.Size = new System.Drawing.Size(112, 17);
-            this.roadworksCheckBox.TabIndex = 4;
-            this.roadworksCheckBox.Text = "Roadwork Images";
-            this.roadworksCheckBox.UseVisualStyleBackColor = true;
-            this.roadworksCheckBox.CheckedChanged += new System.EventHandler(this.roadworksOrOsmCheckBox_CheckedChanged);
+            this.imagesCheckBox.AutoSize = true;
+            this.imagesCheckBox.Location = new System.Drawing.Point(25, 90);
+            this.imagesCheckBox.Name = "imagesCheckBox";
+            this.imagesCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.imagesCheckBox.Size = new System.Drawing.Size(121, 17);
+            this.imagesCheckBox.TabIndex = 4;
+            this.imagesCheckBox.Text = "Background Images";
+            this.imagesCheckBox.UseVisualStyleBackColor = true;
+            this.imagesCheckBox.CheckedChanged += new System.EventHandler(this.imagesOrOsmCheckBox_CheckedChanged);
             // 
             // osmCheckBox
             // 
@@ -69,7 +69,7 @@
             this.osmCheckBox.TabIndex = 5;
             this.osmCheckBox.Text = "OSM Data";
             this.osmCheckBox.UseVisualStyleBackColor = true;
-            this.osmCheckBox.CheckedChanged += new System.EventHandler(this.roadworksOrOsmCheckBox_CheckedChanged);
+            this.osmCheckBox.CheckedChanged += new System.EventHandler(this.imagesOrOsmCheckBox_CheckedChanged);
             // 
             // centreLabel
             // 
@@ -79,6 +79,8 @@
             this.centreLabel.Size = new System.Drawing.Size(101, 13);
             this.centreLabel.TabIndex = 17;
             this.centreLabel.Text = "Centre of Download";
+            // centreOSGridReferenceUserControl
+            this.centreOSGridReferenceUserControl.Location = new System.Drawing.Point(131, 12);
             // 
             // heightLabel
             // 
@@ -181,25 +183,18 @@
             // 
             this.destinationfolderBrowserDialog.Description = "Select destination folder for downloaded items";
             // 
-            // centreOSGridReferenceUserControl
-            // 
-            this.centreOSGridReferenceUserControl.Location = new System.Drawing.Point(131, 12);
-            this.centreOSGridReferenceUserControl.Name = "centreOSGridReferenceUserControl";
-            this.centreOSGridReferenceUserControl.Size = new System.Drawing.Size(120, 20);
-            this.centreOSGridReferenceUserControl.TabIndex = 28;
-            // 
             // DownloadForm
             // 
             this.AcceptButton = this.downloadButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(254, 194);
+            this.ClientSize = new System.Drawing.Size(244, 189);
             this.Controls.Add(this.centreOSGridReferenceUserControl);
             this.Controls.Add(this.overwriteCheckBox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.downloadButton);
-            this.Controls.Add(this.roadworksCheckBox);
+            this.Controls.Add(this.imagesCheckBox);
             this.Controls.Add(this.osmCheckBox);
             this.Controls.Add(this.centreLabel);
             this.Controls.Add(this.heightLabel2);
@@ -226,7 +221,7 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox roadworksCheckBox;
+        private System.Windows.Forms.CheckBox imagesCheckBox;
         private System.Windows.Forms.CheckBox osmCheckBox;
         private OSGridReferenceUserControl centreOSGridReferenceUserControl;
         private System.Windows.Forms.Label centreLabel;
