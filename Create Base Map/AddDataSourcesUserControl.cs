@@ -57,6 +57,9 @@ namespace CreateBaseMap
                     case ".osm":
                         fileType = "OSM";
                         break;
+                    case ".shp":
+                        fileType = "ESRI";
+                        break;
                     case ".tif":
                         fileType = "GeoTiff";
                         break;
@@ -231,10 +234,18 @@ namespace CreateBaseMap
 
                     case ".gml":
 
-                        _progress.buildBackgroundWorker.ReportProgress(100 * count / maxCount, String.Format("Adding OS map {0}...", Path.GetFileNameWithoutExtension(dataSourceFilePath)));
+                        _progress.buildBackgroundWorker.ReportProgress(100 * count / maxCount, String.Format("Adding GML map {0}...", Path.GetFileNameWithoutExtension(dataSourceFilePath)));
 
                         OS.Model.FeatureCollectionType osModel = OS.Model.FeatureCollectionType.Import(dataSourceFilePath);
                         osModel.CopyTo(_parent.OcadMap);
+                        break;
+
+                    case ".shp":
+
+                        _progress.buildBackgroundWorker.ReportProgress(100 * count / maxCount, String.Format("Adding ESRI map {0}...", Path.GetFileNameWithoutExtension(dataSourceFilePath)));
+
+                        Esri.Model.Map esriModel = Esri.Model.Map.Import(dataSourceFilePath);
+                        esriModel.CopyTo(_parent.OcadMap);
                         break;
 
                     case ".ocd":

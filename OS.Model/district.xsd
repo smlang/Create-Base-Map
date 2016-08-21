@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?><schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:district="http://namespaces.os.uk/cmd/district/v2.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf/2.0" elementFormDefault="qualified" targetNamespace="http://namespaces.os.uk/cmd/district/v2.0" version="1.0">
+   <annotation>
+    <appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+      <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <element name="FunctionalSite" substitutionGroup="district:MapClass" type="district:FunctionalSiteType"/>
+  <complexType name="FunctionalSiteType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element minOccurs="0" name="distinctiveName" type="string"/>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FunctionalSitePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:FunctionalSite"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="ElectricityTransmissionLine" substitutionGroup="district:MapClass" type="district:ElectricityTransmissionLineType"/>
+  <complexType name="ElectricityTransmissionLineType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElectricityTransmissionLinePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:ElectricityTransmissionLine"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="RailwayStation" substitutionGroup="district:MapClass" type="district:RailwayStationType"/>
+  <complexType name="RailwayStationType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="distinctiveName" type="string"/>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RailwayStationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:RailwayStation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="DrawLevelValueType">
+    <union memberTypes="district:DrawLevelValueEnumerationType district:DrawLevelValueOtherType"/>
+  </simpleType>
+  <simpleType name="DrawLevelValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="0"/>
+      <enumeration value="1"/>
+      <enumeration value="2"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="DrawLevelValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="Ornament" substitutionGroup="district:MapClass" type="district:OrnamentType"/>
+  <complexType name="OrnamentType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="OrnamentPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Ornament"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SpotHeight" substitutionGroup="district:MapClass" type="district:SpotHeightType"/>
+  <complexType name="SpotHeightType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="height" type="gml:MeasureType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SpotHeightPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:SpotHeight"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Road" substitutionGroup="district:MapClass" type="district:RoadType"/>
+  <complexType name="RoadType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element minOccurs="0" name="distinctiveName" type="string"/>
+          <element minOccurs="0" name="roadNumber" type="string"/>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="drawLevel" type="district:DrawLevelValueType"/>
+          <element name="override" type="district:OverrideValueType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RoadPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Road"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="FeatureCollection" substitutionGroup="gml:AbstractFeature" type="district:FeatureCollectionType"/>
+  <complexType name="FeatureCollectionType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element name="metadata" nillable="true">
+            <annotation>
+              <appinfo>
+                <targetElement xmlns="http://www.opengis.net/gml/3.2">null:MD_Metadata</targetElement>
+              </appinfo>
+            </annotation>
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractMetadataPropertyType">
+                  <sequence/>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="featureMember">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="district:MapClass"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="FeatureCollectionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:FeatureCollection"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Roundabout" substitutionGroup="district:MapClass" type="district:RoundaboutType"/>
+  <complexType name="RoundaboutType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RoundaboutPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Roundabout"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Glasshouse" substitutionGroup="district:MapClass" type="district:GlasshouseType"/>
+  <complexType name="GlasshouseType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GlasshousePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Glasshouse"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TidalWater" substitutionGroup="district:MapClass" type="district:TidalWaterType"/>
+  <complexType name="TidalWaterType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TidalWaterPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:TidalWater"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Building" substitutionGroup="district:MapClass" type="district:BuildingType"/>
+  <complexType name="BuildingType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="BuildingPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Building"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element abstract="true" name="MapClass" substitutionGroup="gml:AbstractFeature" type="district:MapClassType"/>
+  <complexType abstract="true" name="MapClassType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MapClassPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:MapClass"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="RoadTunnel" substitutionGroup="district:MapClass" type="district:RoadTunnelType"/>
+  <complexType name="RoadTunnelType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RoadTunnelPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:RoadTunnel"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="TidalBoundary" substitutionGroup="district:MapClass" type="district:TidalBoundaryType"/>
+  <complexType name="TidalBoundaryType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TidalBoundaryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:TidalBoundary"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SurfaceWater_Line" substitutionGroup="district:MapClass" type="district:SurfaceWater_LineType"/>
+  <complexType name="SurfaceWater_LineType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SurfaceWater_LinePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:SurfaceWater_Line"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Foreshore" substitutionGroup="district:MapClass" type="district:ForeshoreType"/>
+  <complexType name="ForeshoreType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ForeshorePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Foreshore"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="SurfaceWater_Area" substitutionGroup="district:MapClass" type="district:SurfaceWater_AreaType"/>
+  <complexType name="SurfaceWater_AreaType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SurfaceWater_AreaPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:SurfaceWater_Area"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="Woodland" substitutionGroup="district:MapClass" type="district:WoodlandType"/>
+  <complexType name="WoodlandType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:SurfacePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="WoodlandPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:Woodland"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="RailwayTrack" substitutionGroup="district:MapClass" type="district:RailwayTrackType"/>
+  <complexType name="RailwayTrackType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RailwayTrackPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:RailwayTrack"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="HeritageSite" substitutionGroup="district:MapClass" type="district:HeritageSiteType"/>
+  <complexType name="HeritageSiteType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="distinctiveName" type="string"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HeritageSitePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:HeritageSite"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <simpleType name="OverrideValueType">
+    <union memberTypes="district:OverrideValueEnumerationType district:OverrideValueOtherType"/>
+  </simpleType>
+  <simpleType name="OverrideValueEnumerationType">
+    <restriction base="string">
+      <enumeration value="F"/>
+      <enumeration value="T"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="OverrideValueOtherType">
+    <restriction base="string">
+      <pattern value="other: \w{2,}"/>
+    </restriction>
+  </simpleType>
+  <element name="RailwayTunnel" substitutionGroup="district:MapClass" type="district:RailwayTunnelType"/>
+  <complexType name="RailwayTunnelType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="RailwayTunnelPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:RailwayTunnel"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="NamedPlace" substitutionGroup="district:MapClass" type="district:NamedPlaceType"/>
+  <complexType name="NamedPlaceType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="distinctiveName" type="string"/>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="fontHeight" type="gml:CodeType">
+            <annotation>
+              <appinfo>
+                <defaultCodeSpace xmlns="http://www.opengis.net/gml/3.2">http://www.os.uk/xml/codelists/map/</defaultCodeSpace>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="textOrientation" type="gml:MeasureType"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NamedPlacePropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:NamedPlace"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="MotorwayJunction" substitutionGroup="district:MapClass" type="district:MotorwayJunctionType"/>
+  <complexType name="MotorwayJunctionType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="junctionNumber" type="string"/>
+          <element name="geometry" type="gml:PointPropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="MotorwayJunctionPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:MotorwayJunction"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  <element name="AdministrativeBoundary" substitutionGroup="district:MapClass" type="district:AdministrativeBoundaryType"/>
+  <complexType name="AdministrativeBoundaryType">
+    <complexContent>
+      <extension base="district:MapClassType">
+        <sequence>
+          <element name="classification" type="gml:CodeType"/>
+          <element name="geometry" type="gml:CurvePropertyType"/>
+          <element name="featureCode" type="integer"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AdministrativeBoundaryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="district:AdministrativeBoundary"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>

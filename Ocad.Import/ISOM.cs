@@ -19,7 +19,7 @@ namespace Iof.Isom
         _504_Road,
         _505_Track,
         _507_Footpath,
-        _507_2_AccessPoint,
+        _507_3_AccessPoint,
         _515_Railway,
         _515_1_TramwayOverRoad,
         _518_Bridge,

@@ -22,8 +22,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("FeatureCollection", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("FeatureCollection", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class FeatureCollectionType : AbstractFeatureType
     {
 
@@ -64,7 +64,7 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public partial class FeatureCollectionTypeMetadata : AbstractMetadataPropertyType
     {
 
@@ -20432,7 +20432,7 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public partial class FeatureCollectionTypeFeatureMember : AbstractFeatureMemberType
     {
 
@@ -20481,8 +20481,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("AdministrativeBoundary", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("AdministrativeBoundary", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class AdministrativeBoundaryType : AbstractFeatureType
     {
 
@@ -20536,7 +20536,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum AdministrativeBoundaryClassificationValueType
     {
 
@@ -20561,8 +20561,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Airport", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Airport", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class AirportType : AbstractFeatureType
     {
 
@@ -20619,8 +20619,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Building", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Building", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class BuildingType : AbstractFeatureType
     {
 
@@ -20661,8 +20661,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("ElectricityTransmissionLine", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("ElectricityTransmissionLine", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class ElectricityTransmissionLineType : AbstractFeatureType
     {
 
@@ -20703,8 +20703,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Foreshore", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Foreshore", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class ForeshoreType : AbstractFeatureType
     {
 
@@ -20745,8 +20745,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Glasshouse", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Glasshouse", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class GlasshouseType : AbstractFeatureType
     {
 
@@ -20787,8 +20787,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("HeritageSite", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("HeritageSite", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class HeritageSiteType : AbstractFeatureType
     {
 
@@ -20845,8 +20845,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Land", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Land", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class LandType : AbstractFeatureType
     {
 
@@ -20887,8 +20887,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("MotorwayJunction", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("MotorwayJunction", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class MotorwayJunctionType : AbstractFeatureType
     {
 
@@ -20944,8 +20944,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("NamedPlace", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("NamedPlace", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class NamedPlaceType : AbstractFeatureType
     {
 
@@ -21066,8 +21066,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Ornament", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Ornament", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class OrnamentType : AbstractFeatureType
     {
 
@@ -21108,8 +21108,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("PublicAmenity", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("PublicAmenity", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class PublicAmenityType : AbstractFeatureType
     {
 
@@ -21163,7 +21163,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum PublicAmenityClassificationValueType
     {
 
@@ -21192,8 +21192,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("RailwayStation", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("RailwayStation", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RailwayStationType : AbstractFeatureType
     {
 
@@ -21263,7 +21263,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum RailwayStationClassificationValueType
     {
 
@@ -21297,8 +21297,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("RailwayTrack", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("RailwayTrack", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RailwayTrackType : AbstractFeatureType
     {
 
@@ -21352,7 +21352,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum RailwayTrackClassificationValueType
     {
 
@@ -21374,8 +21374,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("RailwayTunnel", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("RailwayTunnel", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RailwayTunnelType : AbstractFeatureType
     {
 
@@ -21416,8 +21416,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Road", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Road", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RoadType : AbstractFeatureType
     {
 
@@ -21502,7 +21502,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum RoadClassificationValueType
     {
 
@@ -21567,8 +21567,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("RoadTunnel", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("RoadTunnel", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RoadTunnelType : AbstractFeatureType
     {
 
@@ -21609,8 +21609,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Roundabout", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Roundabout", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class RoundaboutType : AbstractFeatureType
     {
 
@@ -21666,8 +21666,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("SpotHeight", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("SpotHeight", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class SpotHeightType : AbstractFeatureType
     {
 
@@ -21723,8 +21723,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("SurfaceWater_Area", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("SurfaceWater_Area", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class SurfaceWater_AreaType : AbstractFeatureType
     {
 
@@ -21765,8 +21765,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("SurfaceWater_Line", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("SurfaceWater_Line", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class SurfaceWater_LineType : AbstractFeatureType
     {
 
@@ -21807,8 +21807,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("TidalBoundary", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("TidalBoundary", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class TidalBoundaryType : AbstractFeatureType
     {
 
@@ -21862,7 +21862,7 @@ namespace OS.Model
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
     public enum TidalBoundaryClassificationValueType
     {
 
@@ -21880,8 +21880,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("TidalWater", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("TidalWater", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class TidalWaterType : AbstractFeatureType
     {
 
@@ -21922,8 +21922,8 @@ namespace OS.Model
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0")]
-    [System.Xml.Serialization.XmlRootAttribute("Woodland", Namespace = "http://namespaces.ordnancesurvey.co.uk/vmd/v1.0", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://namespaces.os.uk/cmd/district/v2.0")]
+    [System.Xml.Serialization.XmlRootAttribute("Woodland", Namespace = "http://namespaces.os.uk/cmd/district/v2.0", IsNullable = false)]
     public partial class WoodlandType : AbstractFeatureType
     {
 

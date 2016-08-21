@@ -42,7 +42,7 @@ namespace Esri.IO.Esri3
 
             ReadShapes(map);
 
-            return Map;
+            return map;
         }
 
         internal Int32 ReadBigEndianInt32()

@@ -20,7 +20,10 @@ namespace Ocad.Import
 
             foreach (OS.Model.FeatureCollectionTypeFeatureMember member in osMap.featureMember)
             {
-                ConvertItem(ocadMap, offset, scale, member.Item);
+                if (member.Item != null)
+                {
+                    ConvertItem(ocadMap, offset, scale, member.Item);
+                }
             }
         }
 

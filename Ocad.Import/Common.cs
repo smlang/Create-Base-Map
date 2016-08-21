@@ -41,12 +41,12 @@ namespace Ocad.Import
                     return;
                 case Iof.Isom.Symbols._304_River:
                     ocadAreaSymbolNumber = null;
-                    ocadLineSymbolNumber = "302.1";
+                    ocadLineSymbolNumber = "304.0";
                     ocadPointSymbolNumber = null;
                     return;
                 case Iof.Isom.Symbols._306_Stream:
                     ocadAreaSymbolNumber = null;
-                    ocadLineSymbolNumber = "305.0";
+                    ocadLineSymbolNumber = "306.0";
                     ocadPointSymbolNumber = null;
                     return;
                 case Iof.Isom.Symbols._401_OpenArea:
@@ -94,10 +94,10 @@ namespace Ocad.Import
                     ocadLineSymbolNumber = "507.0";
                     ocadPointSymbolNumber = null;
                     return;
-                case Iof.Isom.Symbols._507_2_AccessPoint:
+                case Iof.Isom.Symbols._507_3_AccessPoint:
                     ocadAreaSymbolNumber = null;
                     ocadLineSymbolNumber = null;
-                    ocadPointSymbolNumber = "507.2";
+                    ocadPointSymbolNumber = "507.3";
                     return;
                 case Iof.Isom.Symbols._515_Railway:
                     ocadAreaSymbolNumber = null;
